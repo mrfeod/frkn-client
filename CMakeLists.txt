@@ -35,6 +35,8 @@ if(APPLE AND NOT IOS)
     set(CMAKE_OSX_ARCHITECTURES "x86_64")
 endif()
 
+list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.7.2/msvc2019_64/lib/cmake")
+
 add_subdirectory(client)
 
 if(NOT IOS AND NOT ANDROID)
