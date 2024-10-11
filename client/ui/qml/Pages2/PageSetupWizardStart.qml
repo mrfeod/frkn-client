@@ -133,9 +133,18 @@ PageType {
             text: qsTr("Register")
 
             clickedFunc: function() {
+                // Generate BIP39 mnemonic phrase
+                // SHA3_512 hex is the user id
                 // TODO Receive mnemonic phrase from the server
                 // TODO Set mnemonic phrase to textKey.textFieldText
                 // This is valid only for testing purposes
+
+                // Redirect to login page with mnemophrase
+
+                // Auth with SHA3_512 in FRKN and receive configs
+
+                // Use mock server to receive configs
+
                 textKey.buttonText = ""
                 textKey.textFieldText = "comfort search stem execute face relief exhaust happy erode movie swing one"
                 textKey.textFieldEditable = false

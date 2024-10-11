@@ -2,6 +2,10 @@
 
 CHCP 1252
 
+set QT_BIN_DIR=C:\Qt\6.7.2\msvc2019_64\bin
+set QIF_BIN_DIR=C:\Qt\Tools\QtInstallerFramework\4.8\bin
+set BUILD_ARCH=64
+
 REM %VAR:"=% mean dequoted %VAR%
 
 set PATH=%QT_BIN_DIR:"=%;%PATH%
@@ -14,9 +18,9 @@ set PROJECT_DIR=%cd%
 set SCRIPT_DIR=%PROJECT_DIR:"=%\deploy
 
 set WORK_DIR=%SCRIPT_DIR:"=%\build_%BUILD_ARCH:"=%
-set APP_NAME=AmneziaVPN
+set APP_NAME=FRKN
 set APP_FILENAME=%APP_NAME:"=%.exe
-set APP_DOMAIN=org.amneziavpn.package
+set APP_DOMAIN=org.frkn.package
 set OUT_APP_DIR=%WORK_DIR:"=%\client\release
 set PREBILT_DEPLOY_DATA_DIR=%PROJECT_DIR:"=%\client\3rd-prebuilt\deploy-prebuilt\windows\x%BUILD_ARCH:"=%
 set DEPLOY_DATA_DIR=%SCRIPT_DIR:"=%\data\windows\x%BUILD_ARCH:"=%
@@ -59,11 +63,11 @@ rem copy "%WORK_DIR%\client\%APP_FILENAME%" "%OUT_APP_DIR%"
 
 echo "Signing exe"
 cd %OUT_APP_DIR%
-signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.exe
+@REM signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.exe
 
 "%QT_BIN_DIR:"=%\windeployqt" --release --qmldir "%PROJECT_DIR:"=%\client"  --force --no-translations "%OUT_APP_DIR:"=%\%APP_FILENAME:"=%"
 
-signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.dll
+@REM signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 *.dll
 
 echo "Copying deploy data..."
 xcopy %DEPLOY_DATA_DIR%    %OUT_APP_DIR%  /s /e /y /i /f
@@ -87,7 +91,7 @@ echo "Creating installer..."
 timeout 5
 
 cd %PROJECT_DIR%
-signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 "%TARGET_FILENAME%"
+@REM signtool sign /v /n "Privacy Technologies OU" /fd sha256 /tr http://timestamp.comodoca.com/?td=sha256 /td sha256 "%TARGET_FILENAME%"
 
 echo "Finished, see %TARGET_FILENAME%"
 exit 0

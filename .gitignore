@@ -4,6 +4,9 @@ macOSPackage/
 AmneziaVPN.dmg
 AmneziaVPN.exe
 AmneziaVPN_*.exe
+FRKN.dmg
+FRKN.exe
+FRKN_*.exe
 deploy/build/*
 deploy/build_32/*
 deploy/build_64/*
@@ -49,6 +52,7 @@ client/Makefile*
 client/fastlane/build/
 client/*build-*
 client/AmneziaVPN.xcodeproj
+client/FRKN.xcodeproj
 client/Debug-iphonesimulator/
 client/amneziavpn_plugin_import.cpp
 client/amneziavpn_qml_plugin_import.cpp
@@ -73,6 +77,7 @@ CMakeLists.txt.user*
 deploy/AppDir
 deploy/Tools
 deploy/AmneziaVPN*Installer*
+deploy/FRKN*Installer*
 
 # MACOS files
 .DS_Store
