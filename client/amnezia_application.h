@@ -15,6 +15,8 @@
 #include "settings.h"
 #include "vpnconnection.h"
 
+#include "ui/bip39_helper.h"
+#include "ui/controllers/appSplitTunnelingController.h"
 #include "ui/controllers/connectionController.h"
 #include "ui/controllers/exportController.h"
 #include "ui/controllers/importController.h"
@@ -23,7 +25,6 @@
 #include "ui/controllers/settingsController.h"
 #include "ui/controllers/sitesController.h"
 #include "ui/controllers/systemController.h"
-#include "ui/controllers/appSplitTunnelingController.h"
 #include "ui/models/containers_model.h"
 #include "ui/models/languageModel.h"
 #include "ui/models/protocols/cloakConfigModel.h"
@@ -33,6 +34,10 @@
 #ifdef Q_OS_WINDOWS
     #include "ui/models/protocols/ikev2ConfigModel.h"
 #endif
+#include "ui/models/apiCountryModel.h"
+#include "ui/models/apiServicesModel.h"
+#include "ui/models/appSplitTunnelingModel.h"
+#include "ui/models/clientManagementModel.h"
 #include "ui/models/protocols/awgConfigModel.h"
 #include "ui/models/protocols/openvpnConfigModel.h"
 #include "ui/models/protocols/shadowsocksConfigModel.h"
@@ -43,10 +48,6 @@
 #include "ui/models/services/sftpConfigModel.h"
 #include "ui/models/services/socks5ProxyConfigModel.h"
 #include "ui/models/sites_model.h"
-#include "ui/models/clientManagementModel.h"
-#include "ui/models/appSplitTunnelingModel.h"
-#include "ui/models/apiServicesModel.h"
-#include "ui/models/apiCountryModel.h"
 
 #define amnApp (static_cast<AmneziaApplication *>(QCoreApplication::instance()))
 
@@ -136,6 +137,8 @@ private:
     QScopedPointer<SitesController> m_sitesController;
     QScopedPointer<SystemController> m_systemController;
     QScopedPointer<AppSplitTunnelingController> m_appSplitTunnelingController;
+
+    QScopedPointer<Bip39Helper> m_bip39Helper;
 
     QNetworkAccessManager *m_nam;
 

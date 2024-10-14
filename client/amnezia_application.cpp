@@ -12,6 +12,7 @@
 #include <QTranslator>
 
 #include "logger.h"
+#include "ui/bip39_helper.h"
 #include "ui/models/installedAppsModel.h"
 #include "version.h"
 
@@ -231,7 +232,12 @@ void AmneziaApplication::registerTypes()
     qmlRegisterSingletonType(QUrl("qrc:/ui/qml/Filters/ContainersModelFilters.qml"), "ContainersModelFilters", 1, 0,
                              "ContainersModelFilters");
 
-    qmlRegisterType<InstalledAppsModel>("InstalledAppsModel", 1, 0, "InstalledAppsModel");
+    m_bip39Helper.reset(new Bip39Helper());
+    qmlRegisterSingletonInstance("Bip39Helper", 1, 0, "Bip39Helper",
+                                 m_bip39Helper.get());
+
+    qmlRegisterType<InstalledAppsModel>("InstalledAppsModel", 1, 0,
+                                        "InstalledAppsModel");
 
     Vpn::declareQmlVpnConnectionStateEnum();
     PageLoader::declareQmlPageEnum();

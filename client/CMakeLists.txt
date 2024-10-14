@@ -130,6 +130,7 @@ set(HEADERS ${HEADERS}
     ${CMAKE_CURRENT_LIST_DIR}/core/controllers/vpnConfigurationController.h
     ${CMAKE_CURRENT_LIST_DIR}/protocols/protocols_defs.h
     ${CMAKE_CURRENT_LIST_DIR}/protocols/qml_register_protocols.h
+    ${CMAKE_CURRENT_LIST_DIR}/ui/bip39_helper.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/pages.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/property_helper.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/qautostart.h
@@ -178,6 +179,7 @@ set(SOURCES ${SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/core/controllers/serverController.cpp
     ${CMAKE_CURRENT_LIST_DIR}/core/controllers/vpnConfigurationController.cpp
     ${CMAKE_CURRENT_LIST_DIR}/protocols/protocols_defs.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ui/bip39_helper.cpp
     ${CMAKE_CURRENT_LIST_DIR}/ui/qautostart.cpp
     ${CMAKE_CURRENT_LIST_DIR}/protocols/vpnprotocol.cpp
     ${CMAKE_CURRENT_LIST_DIR}/core/sshclient.cpp
