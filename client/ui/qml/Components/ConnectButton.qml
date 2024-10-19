@@ -11,8 +11,8 @@ import Style 1.0
 Button {
     id: root
 
-    property string defaultButtonColor: AmneziaStyle.color.paleGray
-    property string progressButtonColor: AmneziaStyle.color.paleGray
+    property string defaultButtonColor: AmneziaStyle.color.slateGray
+    property string progressButtonColor: AmneziaStyle.color.deepBrown
     property string connectedButtonColor: AmneziaStyle.color.goldenApricot
 
     implicitWidth: 190
@@ -50,14 +50,14 @@ Button {
                 verticalOffset: 0
                 radius: 10
                 samples: 25
-                color: root.activeFocus ? AmneziaStyle.color.paleGray : AmneziaStyle.color.goldenApricot
+                color: root.buttonActiveFocus ? AmneziaStyle.color.slateGray : AmneziaStyle.color.goldenApricot
                 source: backgroundCircle
             }
 
             ShapePath {
                 fillColor: AmneziaStyle.color.transparent
-                strokeColor: AmneziaStyle.color.paleGray
-                strokeWidth: root.activeFocus ? 1 : 0
+                strokeColor: AmneziaStyle.color.slateGray
+                strokeWidth: root.buttonActiveFocus ? 1 : 0
                 capStyle: ShapePath.RoundCap
 
                 PathAngleArc {
@@ -115,7 +115,7 @@ Button {
 
             ShapePath {
                 fillColor: AmneziaStyle.color.transparent
-                strokeColor: AmneziaStyle.color.paleGray
+                strokeColor: AmneziaStyle.color.richBrown
                 strokeWidth: 3
                 capStyle: ShapePath.RoundCap
 
@@ -147,7 +147,7 @@ Button {
         font.weight: 700
         font.pixelSize: 20
 
-        color: ConnectionController.isConnected ? connectedButtonColor : defaultButtonColor
+        color: ConnectionController.isConnected ? connectedButtonColor : AmneziaStyle.color.paleGray
         text: root.text
 
         horizontalAlignment: Text.AlignHCenter
