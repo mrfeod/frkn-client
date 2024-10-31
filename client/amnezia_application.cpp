@@ -1,6 +1,7 @@
 #include "amnezia_application.h"
 
 #include <QClipboard>
+#include <QDebug>
 #include <QFontDatabase>
 #include <QMimeData>
 #include <QQuickItem>
@@ -13,6 +14,9 @@
 
 #include "logger.h"
 #include "ui/bip39_helper.h"
+#include "ui/controllers/frkn/configController.h"
+#include "ui/controllers/frkn/frknApiController.h"
+#include "ui/controllers/importController.h"
 #include "ui/models/installedAppsModel.h"
 #include "version.h"
 
@@ -461,4 +465,41 @@ void AmneziaApplication::initControllers()
 
     m_systemController.reset(new SystemController(m_settings));
     m_engine->rootContext()->setContextProperty("SystemController", m_systemController.get());
+
+    m_frknApiController.reset(new frkn::FrknApiController());
+    m_engine->rootContext()->setContextProperty("FrknApi",
+                                                m_frknApiController.get());
+    connect(m_frknApiController.get(), &frkn::FrknApiController::loginFinished,
+            this, [this](const QString &message, const QString &token) {
+              qDebug() << "Login finished" << message << token;
+              m_frknApiController->connectUser(token);
+            });
+
+    m_frknConfigController.reset(new frkn::ConfigController());
+    connect(m_frknApiController.get(),
+            &frkn::FrknApiController::connectFinished,
+            [&config = *m_frknConfigController](
+                const QString &message, const QString &subscriptionUrl) {
+              qDebug() << "Connect finished" << message << subscriptionUrl;
+              if (!subscriptionUrl.isEmpty()) {
+                config.loadConfig(subscriptionUrl);
+              }
+            });
+    connect(m_frknConfigController.get(),
+            &frkn::ConfigController::configReceived,
+            [&import = *m_importController, this](const QStringList &configs) {
+              qDebug() << "Configs received: " << configs.size();
+              for (const auto &config : configs) {
+                qDebug() << "Importing: " << config;
+                if (import.extractConfigFromData(config)) {
+                  import.importConfig();
+                  break;
+                } else {
+                  qDebug() << "Failed to extract config";
+                }
+                // TODO: secure storage stuck on multiple import
+                // Need to create a separate model to choose location
+                // and then import server from that location
+              }
+            });
 }

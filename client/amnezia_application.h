@@ -19,6 +19,8 @@
 #include "ui/controllers/appSplitTunnelingController.h"
 #include "ui/controllers/connectionController.h"
 #include "ui/controllers/exportController.h"
+#include "ui/controllers/frkn/configController.h"
+#include "ui/controllers/frkn/frknApiController.h"
 #include "ui/controllers/importController.h"
 #include "ui/controllers/installController.h"
 #include "ui/controllers/pageController.h"
@@ -139,6 +141,8 @@ private:
     QScopedPointer<AppSplitTunnelingController> m_appSplitTunnelingController;
 
     QScopedPointer<Bip39Helper> m_bip39Helper;
+    QScopedPointer<frkn::FrknApiController> m_frknApiController;
+    QScopedPointer<frkn::ConfigController> m_frknConfigController;
 
     QNetworkAccessManager *m_nam;
 

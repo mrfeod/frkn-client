@@ -4,8 +4,6 @@
 
 #include <bip39/bip39.h>
 
-#include <QCryptographicHash>
-
 QString Bip39Helper::generatePhrase() {
   auto mnemonic = BIP39::generate_mnemonic();
   return QString::fromStdString(mnemonic.to_string());
@@ -18,11 +16,4 @@ bool Bip39Helper::validatePhrase(const QString &phrase) {
     mnemonic.add(word.toStdString());
   }
   return BIP39::valid_mnemonic(mnemonic);
-}
-
-QString Bip39Helper::generateSha3_512(const QString &input) {
-  QByteArray byteArray = input.toUtf8();
-  QByteArray hash =
-      QCryptographicHash::hash(byteArray, QCryptographicHash::Sha3_512);
-  return QString(hash.toHex());
 }
