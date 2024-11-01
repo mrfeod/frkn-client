@@ -44,8 +44,10 @@ void ConfigController::onLoadConfigReply(QNetworkReply *reply) {
     QString decodedString = QString::fromUtf8(decodedData);
     QList<QString> lines = decodedString.split('\n');
     for (const QString &line : lines) {
-      if (line.startsWith("vmess://") || line.startsWith("vless://") ||
-          line.startsWith("ss://")) {
+      if (line.startsWith("vmess://")
+          // || line.startsWith("vless://")
+          // || line.startsWith("ss://")
+      ) {
         configs.push_back(line);
       }
     }

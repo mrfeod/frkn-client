@@ -3,6 +3,8 @@
 #include "core/controllers/serverController.h"
 #include "core/enums/apiEnums.h"
 #include "core/networkUtilities.h"
+#include <qjsonarray.h>
+#include <qjsonobject.h>
 
 #ifdef Q_OS_IOS
     #include <AmneziaVPN-Swift.h>
@@ -303,6 +305,13 @@ void ServersModel::addServer(const QJsonObject &server)
     endResetModel();
 }
 
+void ServersModel::addServers(const QList<QJsonObject> &servers) {
+  beginResetModel();
+  m_settings->addServers(servers);
+  m_servers = m_settings->serversArray();
+  endResetModel();
+}
+
 void ServersModel::editServer(const QJsonObject &server, const int serverIndex)
 {
     m_settings->editServer(serverIndex, server);
@@ -337,6 +346,15 @@ void ServersModel::removeServer()
     }
     setProcessedServerIndex(m_defaultServerIndex);
     endResetModel();
+}
+
+void ServersModel::removeServers() {
+  beginResetModel();
+  m_settings->removeServers();
+  m_servers = QJsonArray{};
+  setDefaultServerIndex(-1);
+  setProcessedServerIndex(m_defaultServerIndex);
+  endResetModel();
 }
 
 QHash<int, QByteArray> ServersModel::roleNames() const
