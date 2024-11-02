@@ -29,7 +29,7 @@ PageType {
         anchors.right: parent.right
         anchors.topMargin: 20
 
-        KeyNavigation.tab: amneziaDnsSwitch
+        KeyNavigation.tab: dnsServersButton
     }
 
     FlickableType {
@@ -53,25 +53,25 @@ PageType {
                 headerText: qsTr("Connection")
             }
 
-            SwitcherType {
-                id: amneziaDnsSwitch
-                Layout.fillWidth: true
-                Layout.margins: 16
+            // SwitcherType {
+            //     id: amneziaDnsSwitch
+            //     Layout.fillWidth: true
+            //     Layout.margins: 16
 
-                text: qsTr("Use AmneziaDNS")
-                descriptionText: qsTr("If AmneziaDNS is installed on the server")
+            //     text: qsTr("Use AmneziaDNS")
+            //     descriptionText: qsTr("If AmneziaDNS is installed on the server")
 
-                checked: SettingsController.isAmneziaDnsEnabled()
-                onCheckedChanged: {
-                    if (checked !== SettingsController.isAmneziaDnsEnabled()) {
-                        SettingsController.toggleAmneziaDns(checked)
-                    }
-                }
+            //     checked: SettingsController.isAmneziaDnsEnabled()
+            //     onCheckedChanged: {
+            //         if (checked !== SettingsController.isAmneziaDnsEnabled()) {
+            //             SettingsController.toggleAmneziaDns(checked)
+            //         }
+            //     }
 
-                KeyNavigation.tab: dnsServersButton.rightButton
-            }
+            //     KeyNavigation.tab: dnsServersButton.rightButton
+            // }
 
-            DividerType {}
+            // DividerType {}
 
             LabelWithButtonType {
                 id: dnsServersButton
