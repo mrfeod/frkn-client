@@ -494,6 +494,23 @@ void AmneziaApplication::initControllers()
                   servers.append(m_importController->getJsonConfig());
                 }
               }
+              for (auto &server : servers) {
+                QString description = server["description"].toString();
+                QRegularExpression re("([A-Z]{2}-\\d+)");
+                QRegularExpressionMatch match = re.match(description);
+                if (match.hasMatch()) {
+                  description = description.left(match.capturedEnd());
+                  server["description"] = description.trimmed();
+                }
+              }
+              std::sort(servers.begin(), servers.end(),
+                        [](const QJsonObject &a, const QJsonObject &b) {
+                          QString descA =
+                              a["description"].toString().split(" ").last();
+                          QString descB =
+                              b["description"].toString().split(" ").last();
+                          return descA < descB;
+                        });
               m_serversModel->removeServers();
               m_serversModel->addServers(servers);
               emit m_importController->importFinished();

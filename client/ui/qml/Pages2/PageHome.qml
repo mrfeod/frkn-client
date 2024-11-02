@@ -512,34 +512,34 @@ PageType {
                                 Keys.onReturnPressed: serverRadioButton.clicked()
                             }
 
-                            ImageButtonType {
-                                id: serverInfoButton
-                                image: "qrc:/images/controls/settings.svg"
-                                imageColor: AmneziaStyle.color.paleGray
+                            // ImageButtonType {
+                            //     id: serverInfoButton
+                            //     image: "qrc:/images/controls/settings.svg"
+                            //     imageColor: AmneziaStyle.color.paleGray
 
-                                implicitWidth: 56
-                                implicitHeight: 56
+                            //     implicitWidth: 56
+                            //     implicitHeight: 56
 
-                                z: 1
+                            //     z: 1
 
-                                Keys.onTabPressed: {
-                                    if (serversMenuContent.focusItemIndex < serversMenuContent.count - 1) {
-                                        serversMenuContent.focusItemIndex++
-                                        serversMenuContent.itemAtIndex(serversMenuContent.focusItemIndex).forceActiveFocus()
-                                    } else {
-                                        focusItem1.forceActiveFocus()
-                                        serversMenuContent.contentY = 0
-                                    }
-                                }
-                                Keys.onEnterPressed: serverInfoButton.clicked()
-                                Keys.onReturnPressed: serverInfoButton.clicked()
+                            //     Keys.onTabPressed: {
+                            //         if (serversMenuContent.focusItemIndex < serversMenuContent.count - 1) {
+                            //             serversMenuContent.focusItemIndex++
+                            //             serversMenuContent.itemAtIndex(serversMenuContent.focusItemIndex).forceActiveFocus()
+                            //         } else {
+                            //             focusItem1.forceActiveFocus()
+                            //             serversMenuContent.contentY = 0
+                            //         }
+                            //     }
+                            //     Keys.onEnterPressed: serverInfoButton.clicked()
+                            //     Keys.onReturnPressed: serverInfoButton.clicked()
 
-                                onClicked: function() {
-                                    ServersModel.processedIndex = index
-                                    PageController.goToPage(PageEnum.PageSettingsServerInfo)
-                                    drawer.close()
-                                }
-                            }
+                            //     onClicked: function() {
+                            //         ServersModel.processedIndex = index
+                            //         PageController.goToPage(PageEnum.PageSettingsServerInfo)
+                            //         drawer.close()
+                            //     }
+                            // }
                         }
 
                         DividerType {
