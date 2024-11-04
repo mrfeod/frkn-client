@@ -13,6 +13,7 @@ RadioButton {
     property int textMaximumLineCount: 2
     property int textElide: Qt.ElideRight
     property string descriptionText
+    property string countryCode
 
     property string hoveredColor: AmneziaStyle.color.barelyTranslucentWhite
     property string defaultColor: AmneziaStyle.color.transparent
@@ -136,15 +137,23 @@ RadioButton {
                 }
             }
 
-            CaptionTextType {
-                id: description
+            RowLayout {
+                spacing: 8
 
-                color: AmneziaStyle.color.mutedGray
-                text: root.descriptionText
+                Image {
+                    source: "qrc:/countriesFlags/images/flagKit/" + countryCode + ".svg"
+                }
 
-                visible: root.descriptionText !== ""
+                CaptionTextType {
+                    id: description
 
-                Layout.fillWidth: true
+                    color: AmneziaStyle.color.mutedGray
+                    text: root.descriptionText
+
+                    visible: root.descriptionText !== ""
+
+                    Layout.fillWidth: true
+                }
             }
         }
     }

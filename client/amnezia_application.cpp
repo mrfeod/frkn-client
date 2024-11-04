@@ -499,9 +499,13 @@ void AmneziaApplication::initControllers()
                 QRegularExpression re("([A-Z]{2}-\\d+)");
                 QRegularExpressionMatch match = re.match(description);
                 if (match.hasMatch()) {
-                  description = description.left(match.capturedEnd());
+                  description = match.captured(1);
                   server["description"] = description.trimmed();
                 }
+                QJsonObject apiConfig;
+                apiConfig["server_country_code"] = description.left(2);
+                apiConfig["server_country_name"] = description.left(2);
+                server["api_config"] = apiConfig;
               }
               std::sort(servers.begin(), servers.end(),
                         [](const QJsonObject &a, const QJsonObject &b) {

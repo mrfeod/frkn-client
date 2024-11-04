@@ -308,70 +308,70 @@ PageType {
 
                     Item {
                         id: focusItem1
-                        KeyNavigation.tab: containersDropDown
-                    }
-
-                    DropDownType {
-                        id: containersDropDown
-
-                        rootButtonImageColor: AmneziaStyle.color.midnightBlack
-                        rootButtonBackgroundColor: AmneziaStyle.color.paleGray
-                        rootButtonBackgroundHoveredColor: Qt.rgba(215, 216, 219, 0.8)
-                        rootButtonBackgroundPressedColor: Qt.rgba(215, 216, 219, 0.65)
-                        rootButtonHoveredBorderColor: AmneziaStyle.color.transparent
-                        rootButtonDefaultBorderColor: AmneziaStyle.color.transparent
-                        rootButtonTextTopMargin: 8
-                        rootButtonTextBottomMargin: 8
-
-                        text: ServersModel.defaultServerDefaultContainerName
-                        textColor: AmneziaStyle.color.midnightBlack
-                        headerText: qsTr("VPN protocol")
-                        headerBackButtonImage: "qrc:/images/controls/arrow-left.svg"
-
-                        rootButtonClickedFunction: function() {
-                            containersDropDown.open()
-                        }
-
-                        drawerParent: root
                         KeyNavigation.tab: serversMenuContent
-
-                        listView: HomeContainersListView {
-                            id: containersListView
-                            rootWidth: root.width
-                            onVisibleChanged: {
-                                if (containersDropDown.visible && !GC.isMobile()) {
-                                    focusItem1.forceActiveFocus()
-                                }
-                            }
-
-                            Connections {
-                                target: ServersModel
-
-                                function onDefaultServerIndexChanged() {
-                                    updateContainersModelFilters()
-                                }
-                            }
-
-                            function updateContainersModelFilters() {
-                                if (ServersModel.isDefaultServerHasWriteAccess()) {
-                                    proxyDefaultServerContainersModel.filters = ContainersModelFilters.getWriteAccessProtocolsListFilters()
-                                } else {
-                                    proxyDefaultServerContainersModel.filters = ContainersModelFilters.getReadAccessProtocolsListFilters()
-                                }
-                            }
-
-                            model: SortFilterProxyModel {
-                                id: proxyDefaultServerContainersModel
-                                sourceModel: DefaultServerContainersModel
-
-                                sorters: [
-                                    RoleSorter { roleName: "isInstalled"; sortOrder: Qt.DescendingOrder }
-                                ]
-                            }
-
-                            Component.onCompleted: updateContainersModelFilters()
-                        }
                     }
+
+                    // DropDownType {
+                    //     id: containersDropDown
+
+                    //     rootButtonImageColor: AmneziaStyle.color.midnightBlack
+                    //     rootButtonBackgroundColor: AmneziaStyle.color.paleGray
+                    //     rootButtonBackgroundHoveredColor: Qt.rgba(215, 216, 219, 0.8)
+                    //     rootButtonBackgroundPressedColor: Qt.rgba(215, 216, 219, 0.65)
+                    //     rootButtonHoveredBorderColor: AmneziaStyle.color.transparent
+                    //     rootButtonDefaultBorderColor: AmneziaStyle.color.transparent
+                    //     rootButtonTextTopMargin: 8
+                    //     rootButtonTextBottomMargin: 8
+
+                    //     text: ServersModel.defaultServerDefaultContainerName
+                    //     textColor: AmneziaStyle.color.midnightBlack
+                    //     headerText: qsTr("VPN protocol")
+                    //     headerBackButtonImage: "qrc:/images/controls/arrow-left.svg"
+
+                    //     rootButtonClickedFunction: function() {
+                    //         containersDropDown.open()
+                    //     }
+
+                    //     drawerParent: root
+                    //     KeyNavigation.tab: serversMenuContent
+
+                    //     listView: HomeContainersListView {
+                    //         id: containersListView
+                    //         rootWidth: root.width
+                    //         onVisibleChanged: {
+                    //             if (containersDropDown.visible && !GC.isMobile()) {
+                    //                 focusItem1.forceActiveFocus()
+                    //             }
+                    //         }
+
+                    //         Connections {
+                    //             target: ServersModel
+
+                    //             function onDefaultServerIndexChanged() {
+                    //                 updateContainersModelFilters()
+                    //             }
+                    //         }
+
+                    //         function updateContainersModelFilters() {
+                    //             if (ServersModel.isDefaultServerHasWriteAccess()) {
+                    //                 proxyDefaultServerContainersModel.filters = ContainersModelFilters.getWriteAccessProtocolsListFilters()
+                    //             } else {
+                    //                 proxyDefaultServerContainersModel.filters = ContainersModelFilters.getReadAccessProtocolsListFilters()
+                    //             }
+                    //         }
+
+                    //         model: SortFilterProxyModel {
+                    //             id: proxyDefaultServerContainersModel
+                    //             sourceModel: DefaultServerContainersModel
+
+                    //             sorters: [
+                    //                 RoleSorter { roleName: "isInstalled"; sortOrder: Qt.DescendingOrder }
+                    //             ]
+                    //         }
+
+                    //         Component.onCompleted: updateContainersModelFilters()
+                    //     }
+                    // }
                 }
 
                 Header2Type {
@@ -484,6 +484,7 @@ PageType {
 
                                 text: name
                                 descriptionText: serverDescription
+                                countryCode: apiServerCountryCode
 
                                 checked: index === serversMenuContent.currentIndex
                                 checkable: !ConnectionController.isConnected
@@ -507,7 +508,15 @@ PageType {
                                     enabled: false
                                 }
 
-                                Keys.onTabPressed: serverInfoButton.forceActiveFocus()
+                                Keys.onTabPressed: {
+                                    if (serversMenuContent.focusItemIndex < serversMenuContent.count - 1) {
+                                        serversMenuContent.focusItemIndex++
+                                        serversMenuContent.itemAtIndex(serversMenuContent.focusItemIndex).forceActiveFocus()
+                                    } else {
+                                        focusItem1.forceActiveFocus()
+                                        serversMenuContent.contentY = 0
+                                    }
+                                }
                                 Keys.onEnterPressed: serverRadioButton.clicked()
                                 Keys.onReturnPressed: serverRadioButton.clicked()
                             }
