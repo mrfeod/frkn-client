@@ -82,7 +82,10 @@ public slots:
     void setGatewayEndpoint(const QString &endpoint);
     QString getGatewayEndpoint();
 
-signals:
+    QString frknToken() const;
+    void resetFrknToken();
+
+  signals:
     void primaryDnsChanged();
     void secondaryDnsChanged();
     void loggingStateChanged();

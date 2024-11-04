@@ -1,6 +1,8 @@
 #ifndef FRKNAPICONTROLLER_H
 #define FRKNAPICONTROLLER_H
 
+#include <settings.h>
+
 #include <QCryptographicHash>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -14,12 +16,14 @@ class FrknApiController : public QObject {
   Q_OBJECT
 
 public:
-  explicit FrknApiController(QObject *parent = nullptr);
+  explicit FrknApiController(std::shared_ptr<Settings> settings,
+                             QObject *parent = nullptr);
 
 public slots:
   void registerUser(const QString &mnemonic);
   void loginUser(const QString &mnemonic);
   void connectUser(const QString &token);
+  bool checkForUpdates();
 
 signals:
   void registerFinished(const QString &message);
@@ -33,6 +37,7 @@ private slots:
 
 private:
   QNetworkAccessManager *m_networkManager;
+  std::shared_ptr<Settings> m_settings;
 };
 
 } // namespace frkn

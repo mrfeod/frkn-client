@@ -451,10 +451,8 @@ void AmneziaApplication::initControllers()
 
     m_settingsController.reset(
             new SettingsController(m_serversModel, m_containersModel, m_languageModel, m_sitesModel, m_appSplitTunnelingModel, m_settings));
-    m_engine->rootContext()->setContextProperty("SettingsController", m_settingsController.get());
-    if (m_settingsController->isAutoConnectEnabled() && m_serversModel->getDefaultServerIndex() >= 0) {
-        QTimer::singleShot(1000, this, [this]() { m_connectionController->openConnection(); });
-    }
+    m_engine->rootContext()->setContextProperty("SettingsController",
+                                                m_settingsController.get());
     connect(m_settingsController.get(), &SettingsController::amneziaDnsToggled, m_serversModel.get(), &ServersModel::toggleAmneziaDns);
 
     m_sitesController.reset(new SitesController(m_settings, m_vpnConnection, m_sitesModel));
@@ -466,12 +464,13 @@ void AmneziaApplication::initControllers()
     m_systemController.reset(new SystemController(m_settings));
     m_engine->rootContext()->setContextProperty("SystemController", m_systemController.get());
 
-    m_frknApiController.reset(new frkn::FrknApiController());
+    m_frknApiController.reset(new frkn::FrknApiController(m_settings));
     m_engine->rootContext()->setContextProperty("FrknApi",
                                                 m_frknApiController.get());
     connect(m_frknApiController.get(), &frkn::FrknApiController::loginFinished,
             this, [this](const QString &message, const QString &token) {
               qDebug() << "Login finished" << message << token;
+              m_settings->setFrknToken(token);
               m_frknApiController->connectUser(token);
             });
 
@@ -488,12 +487,16 @@ void AmneziaApplication::initControllers()
             &frkn::ConfigController::configReceived,
             [this](const QStringList &configs) {
               qDebug() << "Configs received: " << configs.size();
+
+              m_settings->setLastUpdateCheck(QDateTime::currentDateTimeUtc());
+
               QList<QJsonObject> servers;
               for (const auto &config : configs) {
                 if (m_importController->extractConfigFromData(config)) {
                   servers.append(m_importController->getJsonConfig());
                 }
               }
+
               for (auto &server : servers) {
                 QString description = server["description"].toString();
                 QRegularExpression re("([A-Z]{2}-\\d+)");
@@ -507,6 +510,7 @@ void AmneziaApplication::initControllers()
                 apiConfig["server_country_name"] = description.left(2);
                 server["api_config"] = apiConfig;
               }
+
               std::sort(servers.begin(), servers.end(),
                         [](const QJsonObject &a, const QJsonObject &b) {
                           QString descA =
@@ -515,11 +519,25 @@ void AmneziaApplication::initControllers()
                               b["description"].toString().split(" ").last();
                           return descA < descB;
                         });
+
               m_serversModel->removeServers();
               m_serversModel->addServers(servers);
               // TODO Select the best by load
               m_serversModel->setDefaultServerIndex(
                   QRandomGenerator::global()->bounded(servers.size()));
               emit m_importController->importFinished();
+              m_pageController->showBusyIndicator(false);
             });
+
+    if (m_settingsController->isAutoConnectEnabled() &&
+        m_serversModel->getDefaultServerIndex() >= 0) {
+      QTimer::singleShot(
+          1000, this, [this]() { m_connectionController->openConnection(); });
+    } else {
+      QTimer::singleShot(1000, this, [this]() {
+        if (m_frknApiController->checkForUpdates()) {
+          m_pageController->showBusyIndicator(true);
+        }
+      });
+    }
 }

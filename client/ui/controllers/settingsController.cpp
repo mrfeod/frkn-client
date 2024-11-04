@@ -285,3 +285,9 @@ QString SettingsController::getGatewayEndpoint()
 {
     return m_settings->getGatewayEndpoint();
 }
+
+QString SettingsController::frknToken() const {
+  return m_settings->frknToken();
+}
+
+void SettingsController::resetFrknToken() { m_settings->setFrknToken(""); }
