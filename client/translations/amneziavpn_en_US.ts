@@ -1203,7 +1203,7 @@ for Free people</translation>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
         <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation type="unfinished"></translation>
+        <translation>We support freedom of speech and oppose all forms of censorship. We are developing a decentralized VPN that does not collect or store user data.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="97"/>
