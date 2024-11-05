@@ -106,7 +106,7 @@ PageType {
                 descriptionText: qsTr("To discuss features")
                 leftImageSource: "qrc:/images/controls/telegram.svg"
 
-                KeyNavigation.tab: mailButton
+                KeyNavigation.tab: githubButton
                 parentFlickable: fl
 
                 clickedFunction: function() {
@@ -114,23 +114,23 @@ PageType {
                 }
             }
 
-            DividerType {}
+            // DividerType {}
 
-            LabelWithButtonType {
-                id: mailButton
-                Layout.fillWidth: true
+            // LabelWithButtonType {
+            //     id: mailButton
+            //     Layout.fillWidth: true
 
-                text: qsTr("Mail")
-                descriptionText: qsTr("For reviews and bug reports")
-                leftImageSource: "qrc:/images/controls/mail.svg"
+            //     text: qsTr("Mail")
+            //     descriptionText: qsTr("For reviews and bug reports")
+            //     leftImageSource: "qrc:/images/controls/mail.svg"
 
-                KeyNavigation.tab: githubButton
-                parentFlickable: fl
+            //     KeyNavigation.tab: githubButton
+            //     parentFlickable: fl
 
-                clickedFunction: function() {
-                }
+            //     clickedFunction: function() {
+            //     }
 
-            }
+            // }
 
             DividerType {}
 
