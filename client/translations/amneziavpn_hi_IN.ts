@@ -400,7 +400,7 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
         <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <translation>FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -415,7 +415,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
         <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN अधिसूचना</translation>
+        <translation>FRKN VPN अधिसूचना</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -481,7 +481,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="96"/>
         <source>AmneziaWG settings</source>
-        <translation>Amneziaडब्ल्यूजी सेटिंग्स</translation>
+        <translation>FRKNडब्ल्यूजी सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageProtocolAwgSettings.qml" line="104"/>
@@ -1188,7 +1188,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
         <source>About AmneziaVPN</source>
-        <translation>AmneziaVPN के बारे में</translation>
+        <translation>FRKN VPN के बारे में</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
@@ -1246,7 +1246,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
         <source>Support Amnezia</source>
-        <translation>Amnezia का समर्थन करें</translation>
+        <translation>FRKN का समर्थन करें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
@@ -1271,7 +1271,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
         <source>https://t.me/amnezia_vpn_en</source>
-        <translation></translation>
+        <translation>https://t.me/FRKN_org</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1289,7 +1289,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="148"/>
         <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <translation>https://github.com/mrfeod/frkn-client</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="159"/>
@@ -1538,7 +1538,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
         <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>सभी सेटिंग्स डिफ़ॉल्ट पर रीसेट हो जाएंगी. सभी स्थापित AmneziaVPN सेवाएँ अभी भी सर्वर पर रहेंगी।.</translation>
+        <translation>सभी सेटिंग्स डिफ़ॉल्ट पर रीसेट हो जाएंगी. सभी स्थापित FRKN VPN सेवाएँ अभी भी सर्वर पर रहेंगी।.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
@@ -1576,7 +1576,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
         <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>बैकअप में AmneziaVPN में जोड़े गए सभी सर्वरों के लिए आपके पासवर्ड और निजी कुंजी शामिल होंगी। इस जानकारी को सुरक्षित स्थान पर रखें.</translation>
+        <translation>बैकअप में FRKN VPN में जोड़े गए सभी सर्वरों के लिए आपके पासवर्ड और निजी कुंजी शामिल होंगी। इस जानकारी को सुरक्षित स्थान पर रखें.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1943,7 +1943,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
         <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>सभी स्थापित AmneziaVPN सेवाएँ अभी भी सर्वर पर रहेंगी.</translation>
+        <translation>सभी स्थापित FRKN VPN सेवाएँ अभी भी सर्वर पर रहेंगी.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
@@ -2409,7 +2409,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>Amnezia ने पता लगाया है कि आपका सर्वर वर्तमान में है </translation>
+        <translation>FRKN ने पता लगाया है कि आपका सर्वर वर्तमान में है </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
@@ -2659,7 +2659,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
         <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN ऐप के लिए</translation>
+        <translation>FRKN VPN ऐप के लिए</translation>
     </message>
     <message>
         <source>OpenVpn native format</source>
@@ -3320,7 +3320,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../core/errorstrings.cpp" line="44"/>
         <source>Amnezia helper service error</source>
-        <translation>Amnezia भूलने की बीमारी सहायक सेवा त्रुटि</translation>
+        <translation>FRKN भूलने की बीमारी सहायक सेवा त्रुटि</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="45"/>
@@ -3465,7 +3465,7 @@ OpenVPN क्लाइंट और सर्वर के बीच सभी 
 
 यदि आपके क्षेत्र में इंटरनेट सेंसरशिप अत्यधिक स्तर पर है, तो हम आपको सलाह देते हैं कि पहले कनेक्शन से क्लोक पर केवल ओपनवीपीएन का उपयोग करें।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर FRKN VPN में उपलब्ध है
 * मोबाइल उपकरणों पर उच्च बिजली की खपत
 * लचीली सेटिंग्स
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त नहीं
@@ -3487,7 +3487,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 वायरगार्ड सभी उपकरणों पर स्थिर वीपीएन कनेक्शन और उच्च प्रदर्शन प्रदान करता है। यह हार्ड-कोडित एन्क्रिप्शन सेटिंग्स का उपयोग करता है। ओपनवीपीएन की तुलना में वायरगार्ड में कम विलंबता और बेहतर डेटा ट्रांसफर थ्रूपुट है।
 वायरगार्ड अपने विशिष्ट पैकेट हस्ताक्षरों के कारण अवरुद्ध होने के प्रति अतिसंवेदनशील है। कुछ अन्य वीपीएन प्रोटोकॉल के विपरीत, जो अस्पष्टता तकनीकों को नियोजित करते हैं, वायरगार्ड पैकेट के सुसंगत हस्ताक्षर पैटर्न को अधिक आसानी से पहचाना जा सकता है और इस प्रकार उन्नत डीप पैकेट निरीक्षण (डीपीआई) सिस्टम और अन्य नेटवर्क निगरानी उपकरणों द्वारा अवरुद्ध किया जा सकता है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर FRKN VPN में उपलब्ध है
 * कम बिजली की खपत
 * सेटिंग्स की न्यूनतम संख्या
 * डीपीआई विश्लेषण प्रणालियों द्वारा आसानी से पहचाना जाना, अवरुद्ध होने की आशंका
@@ -3520,7 +3520,7 @@ For more detailed information, you can
     <message>
         <location filename="../containers/containers_defs.cpp" line="123"/>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation>AmneziaWG - वायरगार्ड पर आधारित Amnezia का विशेष प्रोटोकॉल। यह वायरगार्ड की तरह तेज़ है, लेकिन रुकावटों के प्रति बहुत प्रतिरोधी है। उच्च स्तर की सेंसरशिप वाले क्षेत्रों के लिए अनुशंसित.</translation>
+        <translation>AmneziaWG - वायरगार्ड पर आधारित FRKN का विशेष प्रोटोकॉल। यह वायरगार्ड की तरह तेज़ है, लेकिन रुकावटों के प्रति बहुत प्रतिरोधी है। उच्च स्तर की सेंसरशिप वाले क्षेत्रों के लिए अनुशंसित.</translation>
     </message>
     <message>
         <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
@@ -3549,7 +3549,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN उपलब्ध सबसे लोकप्रिय और समय-परीक्षणित वीपीएन प्रोटोकॉल में से एक है।
 यह एन्क्रिप्शन और कुंजी विनिमय के लिए एसएसएल/टीएलएस की ताकत का लाभ उठाते हुए, अपने अद्वितीय सुरक्षा प्रोटोकॉल को नियोजित करता है। इसके अलावा, कई प्रमाणीकरण विधियों के लिए ओपनवीपीएन का समर्थन इसे उपकरणों और ऑपरेटिंग सिस्टम की एक विस्तृत श्रृंखला को पूरा करते हुए बहुमुखी और अनुकूलनीय बनाता है। अपनी ओपन-सोर्स प्रकृति के कारण, ओपनवीपीएन को वैश्विक समुदाय द्वारा व्यापक जांच से लाभ मिलता है, जो लगातार इसकी सुरक्षा को मजबूत करता है। प्रदर्शन, सुरक्षा और अनुकूलता के मजबूत संतुलन के साथ, ओपनवीपीएन गोपनीयता के प्रति जागरूक व्यक्तियों और व्यवसायों के लिए शीर्ष विकल्प बना हुआ है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर FRKN VPN में उपलब्ध है
 * मोबाइल उपकरणों पर सामान्य बिजली की खपत
 * विभिन्न ऑपरेटिंग सिस्टम और उपकरणों के साथ काम करने के लिए उपयोगकर्ता की जरूरतों के अनुरूप लचीला अनुकूलन
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त और इसलिए अवरुद्ध होने के लिए अतिसंवेदनशील
@@ -3565,7 +3565,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Works over TCP network protocol.</source>
         <translation>शैडोसॉक्स, SOCKS5 प्रोटोकॉल से प्रेरित होकर, AEAD सिफर का उपयोग करके कनेक्शन की सुरक्षा करता है। हालाँकि शैडोसॉक्स को विवेकपूर्ण और पहचानने में चुनौतीपूर्ण बनाया गया है, यह एक मानक HTTPS कनेक्शन के समान नहीं है। हालाँकि, कुछ ट्रैफ़िक विश्लेषण प्रणालियाँ अभी भी शैडोसॉक्स कनेक्शन का पता लगा सकती हैं। Amnezia में सीमित समर्थन के कारण, AmneziaWG प्रोटोकॉल का उपयोग करने की अनुशंसा की जाती है।
 
-* AmneziaVPN केवल डेस्कटॉप प्लेटफ़ॉर्म पर उपलब्ध है
+* FRKN VPN केवल डेस्कटॉप प्लेटफ़ॉर्म पर उपलब्ध है
 * कॉन्फ़िगर करने योग्य एन्क्रिप्शन प्रोटोकॉल
 * कुछ डीपीआई सिस्टम द्वारा पता लगाने योग्य
 * टीसीपी नेटवर्क प्रोटोकॉल पर काम करता है।.</translation>
@@ -3585,7 +3585,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 जबकि वायरगार्ड अपनी दक्षता के लिए जाना जाता है, इसके विशिष्ट पैकेट हस्ताक्षरों के कारण इसे आसानी से पहचाने जाने में समस्याएँ थीं। AmneziaWG बेहतर अस्पष्टीकरण विधियों का उपयोग करके इस समस्या को हल करता है, जिससे इसका ट्रैफ़िक नियमित इंटरनेट ट्रैफ़िक के साथ मिश्रित हो जाता है।
 इसका मतलब यह है कि AmneziaWG स्टील्थ की एक अतिरिक्त परत जोड़ते हुए मूल के तेज़ प्रदर्शन को बनाए रखता है, जिससे यह तेज़ और विवेकपूर्ण वीपीएन कनेक्शन चाहने वालों के लिए एक बढ़िया विकल्प बन जाता है।
 
-* सभी प्लेटफार्मों पर AmneziaVPN में उपलब्ध है
+* सभी प्लेटफार्मों पर FRKN VPN में उपलब्ध है
 * कम बिजली की खपत
 * सेटिंग्स की न्यूनतम संख्या
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त नहीं, अवरोधन के प्रति प्रतिरोधी
@@ -3617,7 +3617,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 इसकी विशिष्ट विशेषताओं में से एक नेटवर्क और उपकरणों के बीच तेजी से स्विच करने की क्षमता है, जो इसे गतिशील नेटवर्क वातावरण में विशेष रूप से अनुकूली बनाती है।
 हालाँकि यह सुरक्षा, स्थिरता और गति का मिश्रण प्रदान करता है, यह ध्यान रखना आवश्यक है कि IKEv2 को आसानी से पहचाना जा सकता है और अवरुद्ध होने की संभावना है।
 
-* केवल विंडोज़ पर AmneziaVPN में उपलब्ध है
+* केवल विंडोज़ पर FRKN VPN में उपलब्ध है
 * मोबाइल उपकरणों पर कम बिजली की खपत
 * न्यूनतम विन्यास
 * डीपीआई विश्लेषण प्रणालियों द्वारा मान्यता प्राप्त
@@ -3856,7 +3856,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
         <source>Save AmneziaVPN config</source>
-        <translation>AmneziaVPN कॉन्फ़िगरेशन सहेजें</translation>
+        <translation>FRKN VPN कॉन्फ़िगरेशन सहेजें</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="86"/>

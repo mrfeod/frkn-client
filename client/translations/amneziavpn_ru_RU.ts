@@ -1266,7 +1266,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="166"/>
         <source>Configuration is up to date</source>
-        <translation>Конфигурации обновлены</translation>
+        <translation>Конфигурация актуальна</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="182"/>
@@ -3711,7 +3711,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard обеспечивает стабильное VPN-соединение и высокую производительность на всех устройствах. Он использует строго заданные настройки шифрования. WireGuard по сравнению с OpenVPN имеет меньшую задержку и лучшую пропускную способность при передаче данных.
 WireGuard очень уязвим для блокировки из-за характерных сигнатур пакетов. В отличие от некоторых других VPN-протоколов, использующих методы обфускации, последовательные сигнатуры пакетов WireGuard легче идентифицируются и, следовательно, могут блокироваться современными Deep Packet Inspection (DPI) системами и другими инструментами для сетевого мониторинга.
 
-* Доступен в AmneziaVPN на всех платформах
+* Доступен в FRKN VPN на всех платформах
 * Низкое энергопотребление на мобильных устройствах
 * Минимальная конфигурация
 * Легко распознается системами DPI-анализа, поддается блокировке

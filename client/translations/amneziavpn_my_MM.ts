@@ -404,7 +404,7 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
         <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <translation>FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -419,7 +419,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
         <source>AmneziaVPN notification</source>
-        <translation>AmneziaVPN နိုတီ</translation>
+        <translation>FRKN VPN နိုတီ</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -1239,7 +1239,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
         <source>About AmneziaVPN</source>
-        <translation>AmneziaVPN အကြောင်း</translation>
+        <translation>FRKN VPN အကြောင်း</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
@@ -1297,12 +1297,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
         <source>Support Amnezia</source>
-        <translation>Amnezia ကိုကူညီပံ့ပိုးမည်</translation>
+        <translation>FRKN ကိုကူညီပံ့ပိုးမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
         <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>Amnezia သည် အခမဲ့ဖြစ်ပြီး open-source application တစ်ခုဖြစ်သည်။ သင်နှစ်သက်ပါက developer များကို ပံ့ပိုးနိုင်ပါသည်။</translation>
+        <translation>FRKN သည် အခမဲ့ဖြစ်ပြီး open-source application တစ်ခုဖြစ်သည်။ သင်နှစ်သက်ပါက developer များကို ပံ့ပိုးနိုင်ပါသည်။</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="97"/>
@@ -1322,7 +1322,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
         <source>https://t.me/amnezia_vpn_en</source>
-        <translation>https://t.me/amnezia_vpn</translation>
+        <translation>https://t.me/FRKN_org</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1340,7 +1340,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="148"/>
         <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <translation>https://github.com/mrfeod/frkn-client</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="159"/>
@@ -1585,7 +1585,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
         <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်. ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
+        <translation>ဆက်တင်အားလုံးကို မူရင်းအတိုင်း ပြန်လည်သတ်မှတ်ပါမည်. ထည့်သွင်းထားသော FRKN VPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
@@ -1623,7 +1623,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
         <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>မိတ္တူတွင် AmneziaVPN သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။</translation>
+        <translation>မိတ္တူတွင် FRKN VPN သို့ ထည့်ထားသော ဆာဗာအားလုံးအတွက် သင့်စကားဝှက်များနှင့် လျှို့ဝှက်သော့များ ပါဝင်ပါမည်။ ဤအချက်အလက်ကို လုံခြုံသောနေရာတွင် ထားပါ။</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1928,7 +1928,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="100"/>
         <source>Check the server for previously installed Amnezia services</source>
-        <translation>ယခင်က ထည့်သွင်းထားသော Amnezia ဝန်ဆောင်မှုများရှိမရှိ ဆာဗာကို စစ်ဆေးမည်</translation>
+        <translation>ယခင်က ထည့်သွင်းထားသော FRKN ဝန်ဆောင်မှုများရှိမရှိ ဆာဗာကို စစ်ဆေးမည်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="101"/>
@@ -1968,7 +1968,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="218"/>
         <source>Do you want to clear server from Amnezia software?</source>
-        <translation>ဆာဗာကို Amnezia ဆော့ဖ်ဝဲလ်မှ ရှင်းလင်းလိုပါသလား?</translation>
+        <translation>ဆာဗာကို FRKN ဆော့ဖ်ဝဲလ်မှ ရှင်းလင်းလိုပါသလား?</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="219"/>
@@ -2003,12 +2003,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
         <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>ထည့်သွင်းထားသော AmneziaVPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
+        <translation>ထည့်သွင်းထားသော FRKN VPN ဝန်ဆောင်မှုများအားလုံးသည် ဆာဗာပေါ်တွင် ဆက်လက်ရှိနေမည်ဖြစ်သည်.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
         <source>Clear server from Amnezia software</source>
-        <translation>ဆာဗာကို Amnezia ဆော့ဖ်ဝဲလ်မှ ရှင်းလင်းမည်</translation>
+        <translation>ဆာဗာကို FRKN ဆော့ဖ်ဝဲလ်မှ ရှင်းလင်းမည်</translation>
     </message>
 </context>
 <context>
@@ -2410,7 +2410,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="144"/>
         <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation>သင်ထည့်သွင်းသည့်ဒေတာအားလုံးကို တင်းကြပ်လုံခြုံစွာလျှို့ဝှက်ထားမည်ဖြစ်ပြီး Amnezia သို့မဟုတ် မည်သည့်ပြင်ပအဖွဲ့အစည်းကိုမျှ မျှဝေမည် သို့မဟုတ် ထုတ်ဖော်မည်မဟုတ်ပါ</translation>
+        <translation>သင်ထည့်သွင်းသည့်ဒေတာအားလုံးကို တင်းကြပ်လုံခြုံစွာလျှို့ဝှက်ထားမည်ဖြစ်ပြီး FRKN သို့မဟုတ် မည်သည့်ပြင်ပအဖွဲ့အစည်းကိုမျှ မျှဝေမည် သို့မဟုတ် ထုတ်ဖော်မည်မဟုတ်ပါ</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="153"/>
@@ -2471,12 +2471,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>Amnezia သည် သင့်ဆာဗာက </translation>
+        <translation>FRKN သည် သင့်ဆာဗာက </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
         <source>busy installing other software. Amnezia installation </source>
-        <translation>အခြားဆော့ဖ်ဝဲကို ထည့်သွင်းနေသောကြောင့် အလုပ်ရှုပ်နေကြောင်းထောက်လှန်းမိပါသည်. Amnezia ထည့်သွင်းခြင်းလုပ်ငန်းစဥ် </translation>
+        <translation>အခြားဆော့ဖ်ဝဲကို ထည့်သွင်းနေသောကြောင့် အလုပ်ရှုပ်နေကြောင်းထောက်လှန်းမိပါသည်. FRKN ထည့်သွင်းခြင်းလုပ်ငန်းစဥ် </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
@@ -2767,7 +2767,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
         <source>For the AmneziaVPN app</source>
-        <translation>AmneziaVPN အက်ပ်အတွက်</translation>
+        <translation>FRKN VPN အက်ပ်အတွက်</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="137"/>
@@ -3408,7 +3408,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../core/errorstrings.cpp" line="44"/>
         <source>Amnezia helper service error</source>
-        <translation>Amnezia helper ဝန်ဆောင်မှု မှားယွင်းမှု</translation>
+        <translation>FRKN helper ဝန်ဆောင်မှု မှားယွင်းမှု</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="45"/>
@@ -3552,7 +3552,7 @@ Cloak သည် ပက်ကတ်မက်တာဒေတာကို မွမ
 
 သင့်ဒေသတွင်အင်တာနက်ဆင်ဆာဖြတ်တောက်မှုအလွန်ခံစားနေရပါက၊ ပထမဆုံးချိတ်ဆက်မှုမှ Cloak တွင် OpenVPN ကိုသာအသုံးပြုရန်အကြံပြုအပ်ပါသည်.
 
-* ပလက်ဖောင်းအားလုံးတွင်ရှိသော AmneziaVPN တွင်ရရှိနိုင်ပါသည်
+* ပလက်ဖောင်းအားလုံးတွင်ရှိသော FRKN VPN တွင်ရရှိနိုင်ပါသည်
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုမြင့်မားခြင်း
 * ပြောင်းလွယ်ပြင်ဆင်ရန်လွယ်သောဆက်တင်များ
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ‌ထောက်လှန်းမသိရှိနိုင်ပါ
@@ -3574,7 +3574,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard သည် ၎င်းအားအသုံးပြုထားသောစက်အားလုံးကို တည်ငြိမ်သော VPN ချိတ်ဆက်မှုနှင့် စွမ်းဆောင်ရည်မြင့်မားမှုကို ရရှိစေပါသည်။ Hard-coded encryption ဆက်တင်များကို အသုံးပြုထားပါသည်။ OpenVPN နှင့် နှိုင်းယှဉ်ပါက WireGuard သည် latency နည်းပါးပြီး ဒေတာလွှဲပြောင်းမှု ပိုမိုကောင်းမွန်ပါသည်။
 WireGuard သည် ၎င်း၏ ကွဲပြားသော packet လက်မှတ်များ ကြောင့် ပိတ်ဆို့ခြင်းကို အလွန်ခံရနိုင်ချေရှိသည်။ ရှုပ်ထွေးသောနည်းပညာများကို အသုံးပြုသည့် အခြားသော VPN ပရိုတိုကောများနှင့် မတူဘဲ၊ WireGuard ပက်ကတ်များ၏ တသမတ်တည်း လက်မှတ်ပုံစံများကြောင့် ၎င်းတို့ကိုပိုမိုလွယ်ကူစွာ ရှာဖွေဖော်ထုတ်နိုင်ကာ အဆင့်မြင့် Deep Packet Inspection (DPI) စနစ်များနှင့် အခြားသော ကွန်ရက်စောင့်ကြည့်ရေးကိရိယာများဖြင့် ပိတ်ဆို့ထားနိုင်သည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်ပါသည်။
+* ပလက်ဖောင်းအားလုံးရှိ FRKN VPN တွင်ရနိုင်ပါသည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
@@ -3603,7 +3603,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 ၎င်း၏ထူးခြားသောအင်္ဂါရပ်များထဲမှတစ်ခုမှာ ကွန်ရက်များနှင့် စက်ပစ္စည်းများကြား လျင်မြန်စွာပြောင်းလဲနိုင်သည့်စွမ်းရည်ဖြစ်ပြီး ဤစွမ်းရည်ကပင် dynamic ဖြစ်သောကွန်ရက်ပတ်ဝန်းကျင်များတွင် လိုက်လျောညီထွေဖြစ်စေရန်အကူအညီပေးပါသည်။
 IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှု၊ နှင့် အမြန်နှုန်းတို့ ပေးစွမ်းနိုင်သော်လည်း၊ အလွယ်တကူ ထောက်လှန်းသိရှိခံရနိုင်ပြီး ပိတ်ဆို့ခြင်း ခံရနိုင်သည်ကို သတိပြုရန် အရေးကြီးပါသည်။
 
-* Windows တွင်ရှိသော AmneziaVPN တွင်သာရနိုင်သည်။
+* Windows တွင်ရှိသော FRKN VPN တွင်သာရနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * တပ်ဆင်ချိန်ညှိရန်သိပ်မလိုအပ်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များမှထောက်လှန်းနိုင်ခြင်း။
@@ -3643,7 +3643,7 @@ IKEv2 သည် လုံခြုံရေး၊ တည်ငြိမ်မှ
     <message>
         <location filename="../containers/containers_defs.cpp" line="123"/>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation>AmneziaWG - WireGuard ကိုအခြေခံထားသော Amnezia မှ အထူးပရိုတိုကော. ၎င်းသည် WireGuard ကဲ့သို့မြန်ဆန်သော်ပြီး ပိတ်ဆို့ခြင်းများကိုလည်း ခံနိုင်ရည်ရှိပါသည်. ဆင်ဆာဖြတ်တောက်မှု မြင့်မားသော ဒေသများတွင်အသုံးပြုရန် အကြံပြုပါသည်.</translation>
+        <translation>AmneziaWG - WireGuard ကိုအခြေခံထားသော FRKN မှ အထူးပရိုတိုကော. ၎င်းသည် WireGuard ကဲ့သို့မြန်ဆန်သော်ပြီး ပိတ်ဆို့ခြင်းများကိုလည်း ခံနိုင်ရည်ရှိပါသည်. ဆင်ဆာဖြတ်တောက်မှု မြင့်မားသော ဒေသများတွင်အသုံးပြုရန် အကြံပြုပါသည်.</translation>
     </message>
     <message>
         <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
@@ -3672,7 +3672,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
         <translation>OpenVPN သည်ပေါ်ပြူလာအဖြစ်ဆုံးနှင့် ကာလရှည်ကြာအသုံးဝင်ခဲ့ အသုံးဝင်နေစဲဖြစ်သော VPN ပရိုတိုကောများထဲမှတစ်ခုဖြစ်သည်။
 ကုဒ်ဝှက်ခြင်းနှင့် key လဲလှယ်ခြင်းအတွက် SSL/TLS ၏ ခွန်အားကို အသုံးချခြင်းဖြင့် OpenVPN သည် ၎င်း၏ထူးခြားသော လုံခြုံရေးပရိုတိုကောကို အသုံးပြုထားသည်။ ထို့အပြင် OpenVPN ၏ အထောက်အထားစိစစ်ခြင်းနည်းလမ်းများစွာအတွက်အထောက်အပံ့ပေးထားမှုသည် ၎င်းကို စွယ်စုံရလိုက်လျောညီထွေဖြစ်စေပြီး စက်ပစ္စည်းများနှင့် လည်ပတ်မှုစနစ်များစွာကို အထောက်အပံ့ပေးစေပါသည်။ ၎င်း၏ open-source သဘောသဘာဝကြောင့် OpenVPN သည် ၎င်းကို ကျယ်ကျယ်ပြန့်ပြန့် စိစစ်စောင့်ကြည့်ပေးသည့် global community ကြောင့် လုံခြုံရေးပိုမိုကောင်းမွန်လာသည့်အကျိုးကျေးဇူးများ ရရှိခဲ့သည်။ စွမ်းဆောင်ရည်၊ လုံခြုံရေးနှင့် မည်သည့်စက်ပစ္စည်းနှင့်မဆိုလိုက်လျှောညီထွေရှိမှုဂုဏ်သတ္တိတို့ကို မျှတစွာပိုင်ဆိုင်ထားသော OpenVPN သည် ကိုယ်ရေးကိုယ်တာလုံခြုံမှုကိုအထူးဂရုစိုက်သော ပုဂ္ဂိုလ်များနှင့် စီးပွားရေးလုပ်ငန်းများအတွက် ထိပ်တန်းရွေးချယ်မှုတစ်ခုအဖြစ် ရပ်တည်နေစဲဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်အသုံးပြုနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ FRKN VPN တွင်အသုံးပြုနိုင်သည်။
 * မိုဘိုင်းစက်ပစ္စည်းများတွင် ပုံမှန်ပါဝါသုံးစွဲမှုရှိခြင်း။
 * မတူညီသော operating system များ၊ စက်ပစ္စည်းများနှင့်အလုပ်လုပ်သော အသုံးပြုသူများအတွက် လိုအပ်ချက်များနှင့်ကိုက်ညီရန်  လိုသလိုချိန်ညှိနိုင်ခြင်း။
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များကထောက်လှန်းနိုင်သောကြောင့် ပိတ်ဆို့ခြင်းခံရနိုင်သည်။
@@ -3688,7 +3688,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 * Works over TCP network protocol.</source>
         <translation>SOCKS5 ပရိုတိုကောကို အတုယူအခြေခံတည်ဆောက်ထားသော Shadowsocks သည် AEAD cipher ကိုအသုံးပြု၍ ချိတ်ဆက်မှုကိုကာကွယ်ပေးသည်။ Shadowsocks သည် ထောက်လှန်းသိရှိခံရခြင်းမှရှောင်ရှားနိုင်ရန်နှင့် ထောက်လှန်းသည့်သူများခက်ခဲစေရန် ဒီဇိုင်းထုတ်ထားသော်လည်း စံသတ်မှတ်ထားသည့် HTTPS ချိတ်ဆက်မှုနှင့် ထပ်တူမကျပါ။ သို့သော်၊ အချို့သောလမ်းကြောင်းဆိုင်ရာ ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များသည် Shadowsocks ချိတ်ဆက်မှုကို ရှာဖွေတွေ့ရှိနိုင်သေးသည်။ Amnezia တွင် ထောက်ပံ့မှုအကန့်အသတ်ရှိသောကြောင့် AmneziaWG ပရိုတိုကောကို အသုံးပြုရန် အကြံပြုထားသည်။
 
-* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော AmneziaVPN တွင်သာအသုံးပြုနိုင်ပါသည်။
+* Desktop ပလပ်ဖောင်းများတွင်ရှိ‌သော FRKN VPN တွင်သာအသုံးပြုနိုင်ပါသည်။
 * ပြင်ဆင်သတ်မှတ်နိုင်သော စာဝှက်စနစ် ပရိုတိုကော
 * အချို့သော DPI စနစ်များဖြင့် ထောက်လှန်းသိရှိနိုင်သည်။
 * TCP ကွန်ရက် ပရိုတိုကောပေါ်တွင် အလုပ်လုပ်သည်။.</translation>
@@ -3708,7 +3708,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 WireGuard သည် ၎င်း၏ စွမ်းဆောင်ရည်အတွက် လူသိများသော်လည်း ၎င်း၏ ထူးခြားသော packet လက်မှတ်များ ကြောင့် အလွယ်တကူ ထောက်လှန်းရှာဖွေတွေ့ရှိနိုင်သည့် ပြဿနာများ ရှိခဲ့ပါသည်။ AmneziaWG သည် ၎င်း၏ အသွားအလာကို ပုံမှန်အင်တာနက်အသွားအလာနှင့် ရောနှောကာ ပိုမိုကောင်းမွန်သော ရှုပ်ထွေးသော နည်းလမ်းများကို အသုံးပြုခြင်းဖြင့် ဤပြဿနာကို ဖြေရှင်းပေးထားပါသည်။
 ဆိုလိုသည်မှာ AmneziaWG သည် နောက်ထပ်ထောက်လှန်းရခက်စေသည့်အလွှာတစ်ခုထပ်ထည့်စဉ်တွင် မူရင်းမြန်ဆန်သောစွမ်းဆောင်ရည်ကို ထိန်းသိမ်းထားနိုင်သောကြောင့် မြန်ဆန်ပြီးပါးနပ်သော VPN ချိတ်ဆက်မှုကိုလိုချင်သူများအတွက် အကောင်းဆုံးရွေးချယ်မှုတစ်ခုဖြစ်ပါသည်။
 
-* ပလက်ဖောင်းအားလုံးရှိ AmneziaVPN တွင်ရနိုင်သည်။
+* ပလက်ဖောင်းအားလုံးရှိ FRKN VPN တွင်ရနိုင်သည်။
 * ပါဝါသုံးစွဲမှုနည်းပါးခြင်း။
 * ဆက်တင်အရေအတွက်နည်းပါခြင်း။ (အလုပ်ရှုပ်သက်သာ)
 * DPI ခွဲခြမ်းစိတ်ဖြာမှုစနစ်များက ထောက်လှန်းမှုမပြုနိုင်ဘဲ ပိတ်ဆို့ခြင်းကိုခံနိုင်ရည်ရှိသည်။
@@ -4008,7 +4008,7 @@ For more detailed information, you can
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="353"/>
         <source>To read the QR code in the Amnezia app, select &quot;Add server&quot; → &quot;I have data to connect&quot; → &quot;QR code, key or settings file&quot;</source>
-        <translation>Amnezia အက်ပ်ရှိ QR ကုဒ်ကိုဖတ်ရန်အတွက်အောက်ပါအတိုင်း ရွေးချယ်ပါ &quot;ဆာဗာထည့်ရန်&quot; → &quot;ချိတ်ဆက်ရန် ဒေတာရှိသည်&quot; → &quot;QR ကုဒ်၊ key သို့မဟုတ် ဆက်တင်ဖိုင်&quot;</translation>
+        <translation>FRKN အက်ပ်ရှိ QR ကုဒ်ကိုဖတ်ရန်အတွက်အောက်ပါအတိုင်း ရွေးချယ်ပါ &quot;ဆာဗာထည့်ရန်&quot; → &quot;ချိတ်ဆက်ရန် ဒေတာရှိသည်&quot; → &quot;QR ကုဒ်၊ key သို့မဟုတ် ဆက်တင်ဖိုင်&quot;</translation>
     </message>
 </context>
 <context>

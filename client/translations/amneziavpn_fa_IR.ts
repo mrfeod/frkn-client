@@ -404,7 +404,7 @@ Already installed containers were found on the server. All installed containers 
         <location filename="../ui/notificationhandler.cpp" line="63"/>
         <location filename="../ui/notificationhandler.cpp" line="70"/>
         <source>AmneziaVPN</source>
-        <translation>AmneziaVPN</translation>
+        <translation>FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="64"/>
@@ -419,7 +419,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/notificationhandler.cpp" line="94"/>
         <source>AmneziaVPN notification</source>
-        <translation>اخطار AmneziaVPN</translation>
+        <translation>اخطار FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/notificationhandler.cpp" line="95"/>
@@ -1239,7 +1239,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="119"/>
         <source>About AmneziaVPN</source>
-        <translation>درباره Amnezia</translation>
+        <translation>درباره FRKN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettings.qml" line="137"/>
@@ -1297,12 +1297,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="72"/>
         <source>Support Amnezia</source>
-        <translation>پشتیبانی از Amnezia</translation>
+        <translation>پشتیبانی از FRKN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="87"/>
         <source>Amnezia is a free and open-source application. You can support the developers if you like it.</source>
-        <translation>Amnezia یک برنامه رایگان و متن باز است. اگر دوست دارید می توانید از توسعه دهندگان حمایت کنید.</translation>
+        <translation>FRKN یک برنامه رایگان و متن باز است. اگر دوست دارید می توانید از توسعه دهندگان حمایت کنید.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="97"/>
@@ -1322,7 +1322,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="113"/>
         <source>https://t.me/amnezia_vpn_en</source>
-        <translation>https://t.me/amnezia_vpn</translation>
+        <translation>https://t.me/FRKN_org</translation>
     </message>
     <message>
         <source>Mail</source>
@@ -1340,7 +1340,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="148"/>
         <source>https://github.com/amnezia-vpn/amnezia-client</source>
-        <translation>https://github.com/amnezia-vpn/amnezia-client</translation>
+        <translation>https://github.com/mrfeod/frkn-client</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsAbout.qml" line="159"/>
@@ -1585,7 +1585,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="234"/>
         <source>All settings will be reset to default. All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>تمام تنظیمات به حالت پیش‎فرض ریست می‎شوند. تمام سرویس‎های Amnezia بر روی سرور باقی می‎مانند.</translation>
+        <translation>تمام تنظیمات به حالت پیش‎فرض ریست می‎شوند. تمام سرویس‎های FRKN بر روی سرور باقی می‎مانند.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsApplication.qml" line="235"/>
@@ -1623,7 +1623,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="83"/>
         <source>The backup will contain your passwords and private keys for all servers added to AmneziaVPN. Keep this information in a secure place.</source>
-        <translation>پشتیبان حاوی رمزهای عبور و کلیدهای خصوصی شما برای تمام سرورهای اضافه شده به AmneziaVPN خواهد بود. این اطلاعات را در یک مکان امن نگه دارید</translation>
+        <translation>پشتیبان حاوی رمزهای عبور و کلیدهای خصوصی شما برای تمام سرورهای اضافه شده به FRKN VPN خواهد بود. این اطلاعات را در یک مکان امن نگه دارید</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsBackup.qml" line="94"/>
@@ -1927,7 +1927,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="100"/>
         <source>Check the server for previously installed Amnezia services</source>
-        <translation>چک کردن سرویس‎های نصب شده Amnezia بر روی سرور</translation>
+        <translation>چک کردن سرویس‎های نصب شده FRKN بر روی سرور</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="101"/>
@@ -1967,7 +1967,7 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="218"/>
         <source>Do you want to clear server from Amnezia software?</source>
-        <translation>آیا می‌خواهید سرور را از نرم‌افزار Amnezia پاک کنید؟</translation>
+        <translation>آیا می‌خواهید سرور را از نرم‌افزار FRKN پاک کنید؟</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="219"/>
@@ -2002,12 +2002,12 @@ Already installed containers were found on the server. All installed containers 
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="177"/>
         <source>All installed AmneziaVPN services will still remain on the server.</source>
-        <translation>تمام سرویس‎های نصب‎شده Amnezia همچنان بر روی سرور باقی خواهند ماند.</translation>
+        <translation>تمام سرویس‎های نصب‎شده FRKN همچنان بر روی سرور باقی خواهند ماند.</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSettingsServerData.qml" line="210"/>
         <source>Clear server from Amnezia software</source>
-        <translation>پاک کردن سرور از نرم‎افزار Amnezia</translation>
+        <translation>پاک کردن سرور از نرم‎افزار FRKN</translation>
     </message>
 </context>
 <context>
@@ -2409,7 +2409,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="144"/>
         <source>All data you enter will remain strictly confidential and will not be shared or disclosed to the Amnezia or any third parties</source>
-        <translation>تمام داده‎هایی که شما وارد می‎کنید به شدت محرمانه‎ است و با Amnezia یا هر شخص ثالث دیگری به اشتراک گذاشته نمی‎شود</translation>
+        <translation>تمام داده‎هایی که شما وارد می‎کنید به شدت محرمانه‎ است و با FRKN یا هر شخص ثالث دیگری به اشتراک گذاشته نمی‎شود</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardCredentials.qml" line="153"/>
@@ -2470,12 +2470,12 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="65"/>
         <source>Amnezia has detected that your server is currently </source>
-        <translation>Amnezia has detected that your server is currently </translation>
+        <translation>FRKN has detected that your server is currently </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="66"/>
         <source>busy installing other software. Amnezia installation </source>
-        <translation>مشغول نصب نرم افزارهای دیگر نصب Amnezia </translation>
+        <translation>مشغول نصب نرم افزارهای دیگر نصب FRKN </translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageSetupWizardInstalling.qml" line="67"/>
@@ -2762,7 +2762,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="122"/>
         <source>For the AmneziaVPN app</source>
-        <translation>برای نرم‎افزار AmneziaVPN</translation>
+        <translation>برای نرم‎افزار FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Pages2/PageShare.qml" line="137"/>
@@ -3408,7 +3408,7 @@ It&apos;s okay as long as it&apos;s from someone you trust.</source>
     <message>
         <location filename="../core/errorstrings.cpp" line="44"/>
         <source>Amnezia helper service error</source>
-        <translation>Amnezia helper service error</translation>
+        <translation>FRKN helper service error</translation>
     </message>
     <message>
         <location filename="../core/errorstrings.cpp" line="45"/>
@@ -3547,7 +3547,7 @@ Cloak می‌تواند اطلاعات فراداده بسته را تغییر �
 
 اگر در منطقه شما سطح بسیار بالایی از سانسور اینترنت وجود دارد، به شما توصیه می‌شود که از اولین اتصال فقط از OpenVPN over Cloak استفاده کنید.
 
-* در دسترس در AmneziaVPN بر روی تمام پلتفرم‌ها
+* در دسترس در FRKN VPN بر روی تمام پلتفرم‌ها
 * مصرف بالای برق در دستگاه‌های تلفن همراه
 * تنظیمات انعطاف پذیر
 * توسط سیستم‌های تجزیه و تحلیل DPI شناخته نمی‌شود
@@ -3569,7 +3569,7 @@ WireGuard is very susceptible to blocking due to its distinct packet signatures.
 WireGuard اتصال VPN پایدار و عملکرد بالا را در همه دستگاه ها فراهم می کند. از تنظیمات رمزگذاری سخت کد شده استفاده می کند. WireGuard در مقایسه با OpenVPN دارای تأخیر کمتر و توان انتقال داده بهتر است.
 WireGuard به دلیل امضاهای بسته متمایز خود، بسیار مستعد مسدود شدن است. برخلاف برخی دیگر از پروتکل‌های VPN که از تکنیک‌های مبهم سازی استفاده می‌کنند، الگوهای امضای ثابت بسته‌های WireGuard را می‌توان به راحتی شناسایی کرد و بنابراین توسط Deep پیشرفته مسدود شدسیستم های بازرسی بسته (DPI) و سایر ابزارهای نظارت بر شبکه.
 
-* در AmneziaVPN در همه سیستم عامل ها موجود است
+* در FRKN VPN در همه سیستم عامل ها موجود است
 * مصرف برق کم
 * حداقل تعداد تنظیمات
 * به راحتی توسط سیستم های تجزیه و تحلیل DPI شناخته می شود، مستعد مسدود شدن است
@@ -3598,7 +3598,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
 یکی از قابلیت‎‎های متمایز این پروتکل قابلیت سوییچ بین شبکه‎ها و دستگاه‎هاست که قابلیت انطباق بالایی در محیط شبکه‎های دینامیک را دارد
 در حالیکه ترکیبی از امنیت، پایداری و سرعت را ارائه میدهد اما مهم است که اشاره کنیم IKEv2 به راحتی قابل تشخیص در شبکه و بلاک شدن میباشد.
 
-* در AmneziaVPN فقط بر روی ویندوز در دسترس است
+* در FRKN VPN فقط بر روی ویندوز در دسترس است
 * مصرف باتری کم روی دستگاه‎های موبایل
 * تنظیمات ساده
 * امکان شناسایی شدن در شبکه‎های تحلیل DPI
@@ -3638,7 +3638,7 @@ While it offers a blend of security, stability, and speed, it&apos;s essential t
     <message>
         <location filename="../containers/containers_defs.cpp" line="123"/>
         <source>AmneziaWG - Special protocol from Amnezia, based on WireGuard. It&apos;s fast like WireGuard, but very resistant to blockages. Recommended for regions with high levels of censorship.</source>
-        <translation>پروتکل AmneziaWG یک پروتکل اختصاصی Amnezia که بر اساس WireGaurd کار میکند. به اندازه WireGaurd پرسرعت است و در عین حال بسیار مقاوم به بلاک شدن توسط شبکه ست. مناسب برای مناطق با سطح سانسور بالاست.</translation>
+        <translation>پروتکل AmneziaWG یک پروتکل اختصاصی FRKN که بر اساس WireGaurd کار میکند. به اندازه WireGaurd پرسرعت است و در عین حال بسیار مقاوم به بلاک شدن توسط شبکه ست. مناسب برای مناطق با سطح سانسور بالاست.</translation>
     </message>
     <message>
         <source>IKEv2/IPsec -  Modern stable protocol, a bit faster than others, restores connection after signal loss.</source>
@@ -3671,7 +3671,7 @@ It employs its unique security protocol, leveraging the strength of SSL/TLS for 
 به دلیل طبیعت متن-باز آن، OpenVPN از بررسی گسترده توسط یک جامعه جهانی سود می‎برد که باعث بهتر شدن وضعیت امنیتی آن می‎شود.
 به دلیل تعادل قوی بین عملکرد، امنیت و سازگاری OpenVPN تبدیل به یکی از انتخاب‎های اصلی برای اشخاص آگاه بر حریم خصوصی و تجارت‎های مشابه شده است.
 
-* بر روی تمام سیستم‎عامل‎ها در AmneziaVPN در دسترس است.
+* بر روی تمام سیستم‎عامل‎ها در FRKN VPN در دسترس است.
 * مصرف انرژی عادی بر روی دستگاه‎های موبایل
 * قابلیت شخصی‎سازی منعطف مطابق با نیاز شما که امکان کار بر روی دستگاه‎ها و سیستم عامل‎های مختلف را می‎دهد.
 * قابل شناسایی توسط سیستم‎های تحلیل عمیق DPI در شبکه و در نتیجه امکان بلاک شدن
@@ -3707,7 +3707,7 @@ This means that AmneziaWG keeps the fast performance of the original while addin
 در حالی‎که WireGuard به دلیل بازدهی آن شناخته می‎شود اما امکان شناسایی شدن بالا به دلیل امضای ثابت بسته داده‎های آن یکی از مشکلات آن است. AmneziaWG این مشکل را با استفاده از متدهای مخفی سازی حل کرده و در نتیجه ترافیک آن همانند با ترافیک عادی اینترنت است.
 این بدین معنی است که AmneziaWG عملکرد سریع اصلی را حفظ کرده و یک لایه پنهان سازی به آن اضافه کرده که باعث می‎شود که به انتخابی عالی برای آنها که وی‎پی‎ان امن و سریع می‎خواهند تبدیل شود.
 
-* بر روی تمام پلتفرم‌ها در AmneziaVPN قابل دسترسی است.
+* بر روی تمام پلتفرم‌ها در FRKN VPN قابل دسترسی است.
 * مصرف انرژی پایین
 * کمترین میزان تنظیمات
 * غیرقابل تشخیص توسط سیستم‎های تحلیل عمیق DPI و مقاوم به بلاک شدن
@@ -3976,7 +3976,7 @@ For more detailed information, you can
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="28"/>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="35"/>
         <source>Save AmneziaVPN config</source>
-        <translation>ذخیره تنظیمات AmneziaVPN</translation>
+        <translation>ذخیره تنظیمات FRKN VPN</translation>
     </message>
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="86"/>
@@ -4007,7 +4007,7 @@ For more detailed information, you can
     <message>
         <location filename="../ui/qml/Components/ShareConnectionDrawer.qml" line="353"/>
         <source>To read the QR code in the Amnezia app, select &quot;Add server&quot; → &quot;I have data to connect&quot; → &quot;QR code, key or settings file&quot;</source>
-        <translation>برای خواندن QR Code در نرم‎افزار AmneziaVPN &quot;اضافه کردن سرور&quot; -&gt; &quot;من داده برای اتصال دارم&quot; -&gt; &quot;QR Code، کلید یا فایل تنظیمات&quot;</translation>
+        <translation>برای خواندن QR Code در نرم‎افزار FRKN VPN &quot;اضافه کردن سرور&quot; -&gt; &quot;من داده برای اتصال دارم&quot; -&gt; &quot;QR Code، کلید یا فایل تنظیمات&quot;</translation>
     </message>
 </context>
 <context>
