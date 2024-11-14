@@ -10,10 +10,10 @@ TextArea {
     topPadding: 16
     leftPadding: 16
 
-    color: "#D7D8DB"
-    selectionColor:  "#412102"
-    selectedTextColor: "#D7D8DB"
-    placeholderTextColor: "#878B91"
+    color: "#121314"
+    selectionColor:  "#ABACAD"
+    selectedTextColor: "#121314"
+    placeholderTextColor: "#686A6D"
 
     font.pixelSize: 16
     font.weight: Font.Medium
