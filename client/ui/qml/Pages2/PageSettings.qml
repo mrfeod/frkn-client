@@ -161,9 +161,31 @@ PageType {
                 Keys.onTabPressed: lastItemTabClicked(header)
 
                 clickedFunction: function() {
-                    ServersModel.removeServers();
-                    tabBar.visible = false
-                    tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardStart)
+                    var headerText = qsTr("Logout and remove all servers data from the application?")
+                    var descriptionText = qsTr("Servers settings will be removed. You can login again with your mnemophrase.")
+                    var yesButtonText = qsTr("Continue")
+                    var noButtonText = qsTr("Cancel")
+
+                    var yesButtonFunction = function() {
+                        if (ServersModel.isDefaultServerCurrentlyProcessed() && ConnectionController.isConnected) {
+                            PageController.showNotificationMessage(qsTr("Cannot logout during active connection"))
+                        } else
+                        {
+                            ServersModel.removeServers()
+                            PageController.goToPageHome()
+                        }
+
+                        if (!GC.isMobile()) {
+                            root.defaultActiveFocusItem.forceActiveFocus()
+                        }
+                    }
+                    var noButtonFunction = function() {
+                        if (!GC.isMobile()) {
+                            root.defaultActiveFocusItem.forceActiveFocus()
+                        }
+                    }
+
+                    showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                 }
             }
 
