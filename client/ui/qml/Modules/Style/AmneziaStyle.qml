@@ -23,4 +23,17 @@ QtObject {
         readonly property color translucentWhite: Qt.rgba(1, 1, 1, 0.08)
         readonly property color barelyTranslucentWhite: Qt.rgba(1, 1, 1, 0.05)
     }
+
+    property QtObject frknColorPalette: QtObject {
+        readonly property color mainBlue: '#2757FF'
+        readonly property color clickBlue: '#002BC4'
+        readonly property color white: '#FFFFFF'
+        readonly property color black: '#121314'
+        readonly property color grey: '#686A6D'
+        readonly property color lightGrey: '#ABACAD'
+        readonly property color errorRed: '#9B0104'
+        readonly property color backgroundGrey: '#EFEFEF'
+
+        readonly property color test: '#FFFF00' // For debug purposes
+    }
 }

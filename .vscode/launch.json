@@ -8,7 +8,7 @@
             "name": "Launch Qt App",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/client/Debug/AmneziaVPN.exe",
+            "program": "${workspaceFolder}/build/client/Debug/FRKN.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

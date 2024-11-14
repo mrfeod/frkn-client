@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.25.0 FATAL_ERROR)
 
-set(PROJECT AmneziaVPN)
+set(PROJECT FRKN)
 
 project(${PROJECT} VERSION 4.8.2.3
-        DESCRIPTION "AmneziaVPN"
-        HOMEPAGE_URL "https://amnezia.org/"
+        DESCRIPTION "FRKN"
+        HOMEPAGE_URL "https://frkn.org/"
 )
 
 string(TIMESTAMP CURRENT_DATE "%Y-%m-%d")
@@ -35,7 +35,7 @@ if(APPLE AND NOT IOS)
     set(CMAKE_OSX_ARCHITECTURES "x86_64")
 endif()
 
-list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.7.2/msvc2019_64/lib/cmake")
+# list(APPEND CMAKE_PREFIX_PATH "C:/Qt/6.7.2/msvc2019_64/lib/cmake")
 
 add_subdirectory(client)
 
