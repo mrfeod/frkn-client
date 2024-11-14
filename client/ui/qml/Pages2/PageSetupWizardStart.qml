@@ -81,7 +81,7 @@ PageType {
 
             headerText: qsTr("Your 12 words mnemophrase")
             buttonText: qsTr("Insert")
-            textFieldPlaceholderText: qsTr("frog roof kitchen nature ...")
+            textFieldPlaceholderText: "frog roof kitchen nature ..."
 
             borderColor: textField.text === "" ? AmneziaStyle.color.slateGray : (hasValidPhrase ? AmneziaStyle.color.goldenApricot : AmneziaStyle.color.vibrantRed)
             borderFocusedColor: textField.text === "" ? AmneziaStyle.color.paleGray : (hasValidPhrase ? AmneziaStyle.color.goldenApricot : AmneziaStyle.color.vibrantRed)
