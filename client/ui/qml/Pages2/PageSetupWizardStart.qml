@@ -91,7 +91,7 @@ PageType {
                 textField.paste()
             }
 
-            KeyNavigation.tab: lastItemTabClicked(focusItem)
+            KeyNavigation.tab: registerButton.visible ? registerButton : loginButton
         }
 
         Item
@@ -115,9 +115,10 @@ PageType {
                 GC.copyToClipBoard(textKey.textFieldText)
                 PageController.showNotificationMessage(qsTr("Copied"))
                 phraseCopied = true
+                loginButton.forceActiveFocus()
             }
 
-            Keys.onTabPressed: lastItemTabClicked(focusItem)
+            Keys.onTabPressed: phraseCopied ? loginButton : textKey
         }
 
         BasicButtonType {
@@ -143,9 +144,11 @@ PageType {
                 PageController.showBusyIndicator(true)
 
                 FrknApi.registerUser(textKey.textFieldText)
+
+                copyButton.forceActiveFocus()
             }
 
-            Keys.onTabPressed: lastItemTabClicked(focusItem)
+            Keys.onTabPressed: textKey
         }
 
         BasicButtonType {
@@ -164,7 +167,7 @@ PageType {
                 PageController.showBusyIndicator(true)
             }
 
-            Keys.onTabPressed: lastItemTabClicked(focusItem)
+            Keys.onTabPressed: copyButton.phraseCopied ? textKey : copyButton
         }
     }
 
