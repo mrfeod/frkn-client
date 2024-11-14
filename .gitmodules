@@ -16,3 +16,6 @@
 [submodule "client/3rd/QSimpleCrypto"]
 	path = client/3rd/QSimpleCrypto
 	url = https://github.com/amnezia-vpn/QSimpleCrypto.git
+[submodule "client/3rd/bip39"]
+	path = client/3rd/bip39
+	url = https://github.com/mrfeod/bip39.git

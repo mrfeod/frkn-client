@@ -79,6 +79,10 @@ set(BUILD_WITH_QT6 ON)
 add_subdirectory(${CLIENT_ROOT_DIR}/3rd/qtkeychain)
 set(LIBS ${LIBS} qt6keychain)
 
+cmake_policy(SET CMP0077 NEW)
+add_subdirectory(${CLIENT_ROOT_DIR}/3rd/bip39)
+set(LIBS ${LIBS} bip39)
+
 include_directories(
     ${OPENSSL_INCLUDE_DIR}
     ${LIBSSH_INCLUDE_DIR}/include
@@ -86,6 +90,7 @@ include_directories(
     ${CLIENT_ROOT_DIR}/3rd/libssh/include
     ${CLIENT_ROOT_DIR}/3rd/QSimpleCrypto/src/include
     ${CLIENT_ROOT_DIR}/3rd/qtkeychain/qtkeychain
+    ${CLIENT_ROOT_DIR}/3rd/bip39/src/include
     ${CMAKE_CURRENT_BINARY_DIR}/3rd/qtkeychain
     ${CMAKE_CURRENT_BINARY_DIR}/3rd/libssh/include
 )
