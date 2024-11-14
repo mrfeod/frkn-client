@@ -139,6 +139,10 @@ PageType {
                 visible = false
                 copyButton.visible = true
                 warningText.visible = true
+
+                PageController.showBusyIndicator(true)
+
+                FrknApi.registerUser(textKey.textFieldText)
             }
 
             Keys.onTabPressed: lastItemTabClicked(focusItem)
@@ -156,15 +160,8 @@ PageType {
             text: qsTr("Log in")
 
             clickedFunc: function() {
-                // TODO Request configs
-                // Use mock server to receive configs
-                // See how PageSetupWizardConfigSource.qml manages it
-                console.log("User hash: " + Bip39Helper.generateSha3_512(textKey.textFieldText))
-                // vmess://eyJhZGQiOiAiMTk0LjU0LjE1Ni43OSIsICJhaWQiOiAiMCIsICJob3N0IjogImdvb2dsZS5jb20iLCAiaWQiOiAiMTkzM2RkN2ItN2UwZi00NDcyLTg0ODAtNWI1ZTE1YjVjYzQzIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA4MDgxLCAicHMiOiAiXHVkODNjXHVkZGYzXHVkODNjXHVkZGYxIE5MLTEgW0ZSS05dIFZNZXNzIiwgInNjeSI6ICJhdXRvIiwgInRscyI6ICJub25lIiwgInR5cGUiOiAiaHR0cCIsICJ2IjogIjIifQ==
-                // PageController.goToPage(PageEnum.PageSetupWizardConfigSource)
-                let configData = "vmess://eyJhZGQiOiAiMTk0LjU0LjE1Ni43OSIsICJhaWQiOiAiMCIsICJob3N0IjogImdvb2dsZS5jb20iLCAiaWQiOiAiMTkzM2RkN2ItN2UwZi00NDcyLTg0ODAtNWI1ZTE1YjVjYzQzIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA4MDgxLCAicHMiOiAiXHVkODNjXHVkZGYzXHVkODNjXHVkZGYxIE5MLTEgW0ZSS05dIFZNZXNzIiwgInNjeSI6ICJhdXRvIiwgInRscyI6ICJub25lIiwgInR5cGUiOiAiaHR0cCIsICJ2IjogIjIifQ=="
-                ImportController.extractConfigFromData(configData)
-                ImportController.importConfig()
+                FrknApi.loginUser(textKey.textFieldText)
+                PageController.showBusyIndicator(true)
             }
 
             Keys.onTabPressed: lastItemTabClicked(focusItem)
@@ -175,6 +172,8 @@ PageType {
         target: ImportController
 
         function onImportErrorOccurred(errorMessage, goToPageHome) {
+            PageController.showBusyIndicator(false)
+
             if (goToPageHome) {
                 PageController.goToStartPage()
             } else {
@@ -183,12 +182,47 @@ PageType {
         }
 
         function onImportFinished() {
+            PageController.showBusyIndicator(false)
+
             if (!ConnectionController.isConnected) {
                 ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
                 ServersModel.processedIndex = ServersModel.defaultIndex
             }
 
             PageController.goToPageHome()
+        }
+    }
+
+    Connections {
+        target: FrknApi
+
+        function onRegisterFinished(message) {
+            console.log("onRegisterFinished:" + message)
+            PageController.showBusyIndicator(false)
+
+            if(message === "") {
+                // Ok
+            } else if(message === "Wrong mnemonic") {
+                textKey.textFieldText = Bip39Helper.generatePhrase()
+                FrknApi.registerUser(textKey.textFieldText)
+            } else {
+                textKey.buttonText = ""
+                textKey.textFieldText = ""
+                textKey.textFieldEditable = true
+
+                registerButton.visible = true
+                warningText.visible = false
+
+                PageController.showNotificationMessage(message)
+            }
+        }
+
+        function onLoginFinished(message, token) {
+            console.log("onLoginFinished:" + message + " token:" + token)
+            if(message !== "") {
+                PageController.showBusyIndicator(false)
+                PageController.showNotificationMessage(message)
+            }
         }
     }
 }

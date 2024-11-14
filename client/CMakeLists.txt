@@ -137,6 +137,8 @@ set(HEADERS ${HEADERS}
     ${CMAKE_CURRENT_LIST_DIR}/protocols/protocols_defs.h
     ${CMAKE_CURRENT_LIST_DIR}/protocols/qml_register_protocols.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/bip39_helper.h
+    ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/frkn/frknApiController.h
+    ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/frkn/configController.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/pages.h
     ${CMAKE_CURRENT_LIST_DIR}/ui/qautostart.h
     ${CMAKE_CURRENT_LIST_DIR}/protocols/vpnprotocol.h
@@ -186,6 +188,8 @@ set(SOURCES ${SOURCES}
     ${CMAKE_CURRENT_LIST_DIR}/core/controllers/vpnConfigurationController.cpp
     ${CMAKE_CURRENT_LIST_DIR}/protocols/protocols_defs.cpp
     ${CMAKE_CURRENT_LIST_DIR}/ui/bip39_helper.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/frkn/frknApiController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/frkn/configController.cpp
     ${CMAKE_CURRENT_LIST_DIR}/ui/qautostart.cpp
     ${CMAKE_CURRENT_LIST_DIR}/protocols/vpnprotocol.cpp
     ${CMAKE_CURRENT_LIST_DIR}/core/sshclient.cpp
@@ -245,8 +249,8 @@ file(GLOB UI_MODELS_CPP CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_LIST_DIR}/ui/models/services/*.cpp
 )
 
-file(GLOB UI_CONTROLLERS_H CONFIGURE_DEPENDS ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/*.h)
-file(GLOB UI_CONTROLLERS_CPP CONFIGURE_DEPENDS ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/*.cpp)
+file(GLOB UI_CONTROLLERS_H CONFIGURE_DEPENDS ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/*.h /ui/controllers/frkn/*.h)
+file(GLOB UI_CONTROLLERS_CPP CONFIGURE_DEPENDS ${CMAKE_CURRENT_LIST_DIR}/ui/controllers/*.cpp /ui/controllers/frkn/*.cpp)
 
 set(HEADERS ${HEADERS}
     ${COMMON_FILES_H}
