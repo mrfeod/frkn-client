@@ -483,28 +483,24 @@ void AmneziaApplication::initControllers()
     m_frknConfigController.reset(new frkn::ConfigController());
     connect(m_frknApiController.get(),
             &frkn::FrknApiController::connectFinished,
-            [&config = *m_frknConfigController](
-                const QString &message, const QString &subscriptionUrl) {
+            [this](const QString &message, const QString &subscriptionUrl) {
               qDebug() << "Connect finished" << message << subscriptionUrl;
               if (!subscriptionUrl.isEmpty()) {
-                config.loadConfig(subscriptionUrl);
+                m_frknConfigController->loadConfig(subscriptionUrl);
               }
             });
     connect(m_frknConfigController.get(),
             &frkn::ConfigController::configReceived,
-            [&import = *m_importController, this](const QStringList &configs) {
+            [this](const QStringList &configs) {
               qDebug() << "Configs received: " << configs.size();
+              QList<QJsonObject> servers;
               for (const auto &config : configs) {
-                qDebug() << "Importing: " << config;
-                if (import.extractConfigFromData(config)) {
-                  import.importConfig();
-                  break;
-                } else {
-                  qDebug() << "Failed to extract config";
+                if (m_importController->extractConfigFromData(config)) {
+                  servers.append(m_importController->getJsonConfig());
                 }
-                // TODO: secure storage stuck on multiple import
-                // Need to create a separate model to choose location
-                // and then import server from that location
               }
+              m_serversModel->removeServers();
+              m_serversModel->addServers(servers);
+              emit m_importController->importFinished();
             });
 }

@@ -67,6 +67,14 @@ void Settings::addServer(const QJsonObject &server)
     setServersArray(servers);
 }
 
+void Settings::addServers(const QList<QJsonObject> &inputServers) {
+  QJsonArray servers = serversArray();
+  for (const QJsonValue &server : inputServers) {
+    servers.append(server);
+  }
+  setServersArray(servers);
+}
+
 void Settings::removeServer(int index)
 {
     QJsonArray servers = serversArray();
@@ -76,6 +84,17 @@ void Settings::removeServer(int index)
     servers.removeAt(index);
     setServersArray(servers);
     emit serverRemoved(index);
+}
+
+void Settings::removeServers() {
+  QJsonArray servers = serversArray();
+  if (servers.empty())
+    return;
+
+  setServersArray(QJsonArray{});
+  for (int i = servers.size() - 1; i >= 0; i--) {
+    emit serverRemoved(i);
+  }
 }
 
 bool Settings::editServer(int index, const QJsonObject &server)

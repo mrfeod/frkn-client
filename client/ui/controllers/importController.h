@@ -36,6 +36,7 @@ public slots:
     QString getConfig();
     QString getConfigFileName();
     QString getMaliciousWarningText();
+    QJsonObject getJsonConfig() const;
 
 #if defined Q_OS_ANDROID || defined Q_OS_IOS
     void startDecodingQr();

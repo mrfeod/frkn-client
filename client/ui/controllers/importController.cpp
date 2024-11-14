@@ -223,6 +223,8 @@ QString ImportController::getConfig()
     return QJsonDocument(m_config).toJson(QJsonDocument::Indented);
 }
 
+QJsonObject ImportController::getJsonConfig() const { return m_config; }
+
 QString ImportController::getConfigFileName()
 {
     return m_configFileName;

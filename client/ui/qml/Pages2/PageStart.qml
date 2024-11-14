@@ -340,13 +340,26 @@ PageType {
             KeyNavigation.tab: plusTabButton
         }
 
+        // TabImageButtonType {
+        //     id: plusTabButton
+        //     isSelected: tabBar.currentIndex === 3
+        //     image: "qrc:/images/controls/plus.svg"
+        //     clickedFunc: function () {
+        //         tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardConfigSource)
+        //         tabBar.currentIndex = 3
+        //     }
+
+        //     Keys.onTabPressed: PageController.forceStackActiveFocus()
+        // }
+
         TabImageButtonType {
-            id: plusTabButton
-            isSelected: tabBar.currentIndex === 3
-            image: "qrc:/images/controls/plus.svg"
+            id: logoutTabButton
+            isSelected: false
+            image: "qrc:/images/controls/x-circle.svg"
             clickedFunc: function () {
-                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardConfigSource)
-                tabBar.currentIndex = 3
+                tabBar.visible = false
+                ServersModel.removeServers();
+                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardStart)
             }
 
             Keys.onTabPressed: PageController.forceStackActiveFocus()

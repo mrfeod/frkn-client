@@ -40,7 +40,9 @@ public:
     int serversCount() const;
     QJsonObject server(int index) const;
     void addServer(const QJsonObject &server);
+    void addServers(const QList<QJsonObject> &servers);
     void removeServer(int index);
+    void removeServers();
     bool editServer(int index, const QJsonObject &server);
 
     int defaultServerIndex() const

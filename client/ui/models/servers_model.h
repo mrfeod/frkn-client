@@ -87,8 +87,10 @@ public slots:
     const ServerCredentials getServerCredentials(const int index);
 
     void addServer(const QJsonObject &server);
+    void addServers(const QList<QJsonObject> &servers);
     void editServer(const QJsonObject &server, const int serverIndex);
     void removeServer();
+    void removeServers();
 
     QJsonObject getServerConfig(const int serverIndex);
 
