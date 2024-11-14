@@ -106,7 +106,7 @@ PageType {
                 descriptionText: qsTr("To discuss features")
                 leftImageSource: "qrc:/images/controls/telegram.svg"
 
-                KeyNavigation.tab: githubButton
+                KeyNavigation.tab: mailButton
                 parentFlickable: fl
 
                 clickedFunction: function() {
@@ -114,25 +114,23 @@ PageType {
                 }
             }
 
-            // DividerType {}
+            DividerType {}
 
-            // LabelWithButtonType {
-            //     id: mailButton
-            //     Layout.fillWidth: true
+            LabelWithButtonType {
+                id: mailButton
+                Layout.fillWidth: true
 
-            //     text: qsTr("support@amnezia.org")
-            //     descriptionText: qsTr("For reviews and bug reports")
-            //     leftImageSource: "qrc:/images/controls/mail.svg"
+                text: qsTr("support@amnezia.org")
+                descriptionText: qsTr("For reviews and bug reports")
+                leftImageSource: "qrc:/images/controls/mail.svg"
 
-            //     KeyNavigation.tab: githubButton
-            //     parentFlickable: fl
+                KeyNavigation.tab: githubButton
+                parentFlickable: fl
 
-            //     clickedFunction: function() {
-            //         GC.copyToClipBoard(text)
-            //         PageController.showNotificationMessage(qsTr("Copied"))
-            // }
-
-            // }
+                clickedFunction: function() {
+                    Qt.openUrlExternally("mailto:mail@frkn.org")
+                }
+            }
 
             DividerType {}
 
