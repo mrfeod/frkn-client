@@ -518,10 +518,8 @@ void AmneziaApplication::initControllers()
 
               std::sort(servers.begin(), servers.end(),
                         [](const QJsonObject &a, const QJsonObject &b) {
-                          QString descA =
-                              a["description"].toString().split(" ").last();
-                          QString descB =
-                              b["description"].toString().split(" ").last();
+                          QString descA = a["description"].toString();
+                          QString descB = b["description"].toString();
                           return descA < descB;
                         });
 

@@ -337,6 +337,17 @@ PageType {
                 tabBar.currentIndex = 2
             }
 
+            KeyNavigation.tab: buyButton
+        }
+
+        TabImageButtonType {
+            id: buyButton
+            isSelected: false
+            image: "qrc:/images/controls/cart.svg"
+            clickedFunc: function () {
+                Qt.openUrlExternally("https://frkn.org/#pricing")
+            }
+
             Keys.onTabPressed: PageController.forceStackActiveFocus()
         }
 
