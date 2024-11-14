@@ -112,9 +112,8 @@ PageType {
             text: qsTr("Copy mnemonic phrase")
 
             clickedFunc: function() {
-                textKey.textField.selectAll()
-                textKey.textField.copy()
-                textKey.textField.deselect()
+                GC.copyToClipBoard(textKey.textFieldText)
+                PageController.showNotificationMessage(qsTr("Copied"))
                 phraseCopied = true
             }
 
@@ -158,13 +157,38 @@ PageType {
 
             clickedFunc: function() {
                 // TODO Request configs
-                // Auth with SHA3_512 in FRKN and receive configs
                 // Use mock server to receive configs
                 // See how PageSetupWizardConfigSource.qml manages it
                 console.log("User hash: " + Bip39Helper.generateSha3_512(textKey.textFieldText))
+                // vmess://eyJhZGQiOiAiMTk0LjU0LjE1Ni43OSIsICJhaWQiOiAiMCIsICJob3N0IjogImdvb2dsZS5jb20iLCAiaWQiOiAiMTkzM2RkN2ItN2UwZi00NDcyLTg0ODAtNWI1ZTE1YjVjYzQzIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA4MDgxLCAicHMiOiAiXHVkODNjXHVkZGYzXHVkODNjXHVkZGYxIE5MLTEgW0ZSS05dIFZNZXNzIiwgInNjeSI6ICJhdXRvIiwgInRscyI6ICJub25lIiwgInR5cGUiOiAiaHR0cCIsICJ2IjogIjIifQ==
+                // PageController.goToPage(PageEnum.PageSetupWizardConfigSource)
+                let configData = "vmess://eyJhZGQiOiAiMTk0LjU0LjE1Ni43OSIsICJhaWQiOiAiMCIsICJob3N0IjogImdvb2dsZS5jb20iLCAiaWQiOiAiMTkzM2RkN2ItN2UwZi00NDcyLTg0ODAtNWI1ZTE1YjVjYzQzIiwgIm5ldCI6ICJ0Y3AiLCAicGF0aCI6ICIvIiwgInBvcnQiOiA4MDgxLCAicHMiOiAiXHVkODNjXHVkZGYzXHVkODNjXHVkZGYxIE5MLTEgW0ZSS05dIFZNZXNzIiwgInNjeSI6ICJhdXRvIiwgInRscyI6ICJub25lIiwgInR5cGUiOiAiaHR0cCIsICJ2IjogIjIifQ=="
+                ImportController.extractConfigFromData(configData)
+                ImportController.importConfig()
             }
 
             Keys.onTabPressed: lastItemTabClicked(focusItem)
+        }
+    }
+
+    Connections {
+        target: ImportController
+
+        function onImportErrorOccurred(errorMessage, goToPageHome) {
+            if (goToPageHome) {
+                PageController.goToStartPage()
+            } else {
+                PageController.closePage()
+            }
+        }
+
+        function onImportFinished() {
+            if (!ConnectionController.isConnected) {
+                ServersModel.setDefaultServerIndex(ServersModel.getServersCount() - 1);
+                ServersModel.processedIndex = ServersModel.defaultIndex
+            }
+
+            PageController.goToPageHome()
         }
     }
 }
