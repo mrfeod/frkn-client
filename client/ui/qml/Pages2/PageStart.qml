@@ -351,18 +351,5 @@ PageType {
 
         //     Keys.onTabPressed: PageController.forceStackActiveFocus()
         // }
-
-        TabImageButtonType {
-            id: logoutTabButton
-            isSelected: false
-            image: "qrc:/images/controls/x-circle.svg"
-            clickedFunc: function () {
-                tabBar.visible = false
-                ServersModel.removeServers();
-                tabBarStackView.goToTabBarPage(PageEnum.PageSetupWizardStart)
-            }
-
-            Keys.onTabPressed: PageController.forceStackActiveFocus()
-        }
     }
 }

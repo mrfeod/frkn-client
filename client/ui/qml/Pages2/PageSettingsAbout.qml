@@ -236,7 +236,7 @@ PageType {
               parentFlickable: fl
 
               clickedFunc: function() {
-                Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl() + "/policy")
+                Qt.openUrlExternally(LanguageModel.getCurrentSiteUrl() + "/privacy-policy")
               }
             }
         }
