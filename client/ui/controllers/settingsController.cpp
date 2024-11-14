@@ -325,3 +325,9 @@ bool SettingsController::isOnTv()
     return false;
 #endif
 }
+
+QString SettingsController::frknToken() const {
+  return m_settings->frknToken();
+}
+
+void SettingsController::resetFrknToken() { m_settings->setFrknToken(""); }

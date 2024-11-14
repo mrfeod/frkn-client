@@ -193,6 +193,16 @@ public:
         emit screenshotsEnabledChanged(enabled);
     }
 
+    QString frknToken() const { return value("FRKN/token", "").toString(); }
+    void setFrknToken(const QString &token) { setValue("FRKN/token", token); }
+
+    QDateTime lastUpdateCheck() const {
+      return value("FRKN/lastUpdateCheck", QDateTime()).toDateTime();
+    }
+    void setLastUpdateCheck(const QDateTime &date) {
+      setValue("FRKN/lastUpdateCheck", date);
+    }
+
     void clearSettings();
 
     enum AppsRouteMode {

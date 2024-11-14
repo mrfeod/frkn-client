@@ -123,7 +123,7 @@ PageType {
                 clickedFunction: function() {
                     PageController.goToPage(PageEnum.PageSettingsAbout)
                 }
-                KeyNavigation.tab: close
+                KeyNavigation.tab: updateConfig
 
             }
 
@@ -150,6 +150,31 @@ PageType {
             }
 
             LabelWithButtonType {
+                id: updateConfig
+                Layout.fillWidth: true
+                Layout.preferredHeight: about.height
+
+                text: qsTr("Update configuration")
+                leftImageSource: "qrc:/images/controls/refresh-cw.svg"
+                isLeftImageHoverEnabled: false
+
+                clickedFunction: function() {
+                    if(FrknApi.checkForUpdates()) {
+                        PageController.showBusyIndicator(true)
+                    }
+                    else {
+                        PageController.showNotificationMessage(qsTr("Configuration is up to date"))
+                    }
+                }
+
+                KeyNavigation.tab: logout
+            }
+
+            DividerType {
+                visible: GC.isDesktop()
+            }
+
+            LabelWithButtonType {
                 id: logout
                 Layout.fillWidth: true
                 Layout.preferredHeight: about.height
@@ -157,8 +182,6 @@ PageType {
                 text: qsTr("Logout")
                 leftImageSource: "qrc:/images/controls/logout.svg"
                 isLeftImageHoverEnabled: false
-
-                Keys.onTabPressed: lastItemTabClicked(header)
 
                 clickedFunction: function() {
                     var headerText = qsTr("Logout and remove all servers data from the application?")
@@ -172,6 +195,7 @@ PageType {
                         } else
                         {
                             ServersModel.removeServers()
+                            SettingsController.resetFrknToken()
                             PageController.goToPageHome()
                         }
 
@@ -187,6 +211,8 @@ PageType {
 
                     showQuestionDrawer(headerText, descriptionText, yesButtonText, noButtonText, yesButtonFunction, noButtonFunction)
                 }
+
+                KeyNavigation.tab: close
             }
 
             DividerType {

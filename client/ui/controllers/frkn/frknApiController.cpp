@@ -20,8 +20,10 @@ QString generateSha3_512(const QString &input) {
 
 namespace frkn {
 
-FrknApiController::FrknApiController(QObject *parent)
-    : QObject(parent), m_networkManager(new QNetworkAccessManager(this)) {}
+FrknApiController::FrknApiController(std::shared_ptr<Settings> settings,
+                                     QObject *parent)
+    : QObject(parent), m_settings(settings),
+      m_networkManager(new QNetworkAccessManager(this)) {}
 
 void FrknApiController::registerUser(const QString &mnemonic) {
   QUrl url("https://frkn.org/api/register");
@@ -59,6 +61,26 @@ void FrknApiController::connectUser(const QString &token) {
   QNetworkReply *reply = m_networkManager->get(request);
   connect(reply, &QNetworkReply::finished, this,
           [this, reply]() { onConnectReply(reply); });
+}
+
+bool FrknApiController::checkForUpdates() {
+  QDateTime lastUpdateCheck = m_settings->lastUpdateCheck();
+  QDateTime now = QDateTime::currentDateTimeUtc();
+  const int oneDayUpdateInterval = 60 * 60 * 24;
+  if (lastUpdateCheck.isValid() &&
+      lastUpdateCheck.secsTo(now) > oneDayUpdateInterval) {
+    qDebug() << "Checking for updates";
+    QString token = m_settings->frknToken();
+    if (!token.isEmpty()) {
+      connectUser(token);
+      return true;
+    } else {
+      qWarning() << "No token found, skipping update check";
+    }
+  } else {
+    qDebug() << "Skipping update check";
+  }
+  return false;
 }
 
 void FrknApiController::onRegisterReply(QNetworkReply *reply) {

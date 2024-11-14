@@ -89,7 +89,10 @@ public slots:
 
     bool isOnTv();
 
-signals:
+    QString frknToken() const;
+    void resetFrknToken();
+
+  signals:
     void primaryDnsChanged();
     void secondaryDnsChanged();
     void loggingStateChanged();

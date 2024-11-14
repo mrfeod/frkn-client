@@ -222,5 +222,13 @@ PageType {
                 PageController.showNotificationMessage(message)
             }
         }
+
+        function onConnectFinished(message, subscriptionUrl) {
+            console.log("onConnectFinished:" + message + " subscriptionUrl:" + subscriptionUrl)
+            if(message !== "") {
+                PageController.showBusyIndicator(false)
+                PageController.showNotificationMessage(message)
+            }
+        }
     }
 }
