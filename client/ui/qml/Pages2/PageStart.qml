@@ -337,7 +337,7 @@ PageType {
                 tabBar.currentIndex = 2
             }
 
-            KeyNavigation.tab: plusTabButton
+            KeyNavigation.tab: PageController.forceStackActiveFocus()
         }
 
         // TabImageButtonType {
