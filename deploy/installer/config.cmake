@@ -17,8 +17,8 @@ elseif(LINUX)
     )
     
     configure_file(
-        ${CMAKE_CURRENT_LIST_DIR}/config/frkn.desktop.in
-        ${CMAKE_BINARY_DIR}/../AppDir/frkn.desktop
+        ${CMAKE_CURRENT_LIST_DIR}/config/FRKN.desktop.in
+        ${CMAKE_BINARY_DIR}/../AppDir/FRKN.desktop
     )
 endif()
 

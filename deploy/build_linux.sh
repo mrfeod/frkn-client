@@ -23,9 +23,9 @@ mkdir -p $CQTDEPLOYER_DIR
 echo "Project dir: ${PROJECT_DIR}" 
 echo "Build dir: ${BUILD_DIR}"
 
-APP_NAME=AmneziaVPN
+APP_NAME=FRKN
 APP_FILENAME=$APP_NAME.app
-APP_DOMAIN=org.amneziavpn.package
+APP_DOMAIN=org.frkn.package
 
 DEPLOY_DATA_DIR=$PROJECT_DIR/deploy/data/linux
 PREBUILT_DEPLOY_DATA_DIR=$PROJECT_DIR/client/3rd-prebuilt/deploy-prebuilt/linux/client/bin
@@ -36,7 +36,7 @@ QMAKE_STASH_FILE=$PROJECT_DIR/.qmake_stash
 
 # Search Qt
 if [ -z "${QT_VERSION+x}" ]; then
-  QT_VERSION=6.6.2
+  QT_VERSION=6.7.3
   if [ -f /opt/Qt/$QT_VERSION/gcc_64/bin/qmake ]; then
     QT_BIN_DIR=/opt/Qt/$QT_VERSION/gcc_64/bin
   elif [ -f $HOME/Qt/$QT_VERSION/gcc_64/bin/qmake ]; then
@@ -72,8 +72,8 @@ if [ ! -f $CQTDEPLOYER_DIR/cqtdeployer.sh ]; then
 fi
 
 
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/AmneziaVPN -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
-$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/AmneziaVPN-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/client/FRKN -qmake $QT_BIN_DIR/qmake -qmlDir $PROJECT_DIR/client/ui/qml/ -targetDir $APP_DIR/client/
+$CQTDEPLOYER_DIR/cqtdeployer.sh -bin $BUILD_DIR/service/server/FRKN-service -qmake $QT_BIN_DIR/qmake -targetDir $APP_DIR/service/
 
 rm -f $INSTALLER_DATA_DIR/data.7z
 
@@ -83,4 +83,4 @@ ldd $CQTDEPLOYER_DIR/bin/binarycreator
 
 cp -r $PROJECT_DIR/deploy/installer $BUILD_DIR
 
-$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/AmneziaVPN_Linux_Installer.bin
+$CQTDEPLOYER_DIR/binarycreator.sh --offline-only -v -c $BUILD_DIR/installer/config/linux.xml -p $BUILD_DIR/installer/packages -f $PROJECT_DIR/deploy/FRKN_Linux_Installer.bin

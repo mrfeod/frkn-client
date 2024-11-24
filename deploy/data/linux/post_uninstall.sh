@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APP_NAME=AmneziaVPN
+APP_NAME=FRKN
 LOG_FOLDER=/var/log/$APP_NAME
 LOG_FILE="$LOG_FOLDER/post-uninstall.log"
 APP_PATH=/opt/$APP_NAME
@@ -13,7 +13,12 @@ date >> $LOG_FILE
 echo "Uninstall Script started" >> $LOG_FILE
 sudo killall -9 $APP_NAME 2>> $LOG_FILE
 
-ls /opt/AmneziaVPN/client/lib/* | while IFS=: read -r dir; do
+if command -v steamos-readonly &> /dev/null; then
+        sudo steamos-readonly disable >> $LOG_FILE
+        echo "steamos-readonly disabled" >> $LOG_FILE
+fi
+
+ls /opt/FRKN/client/lib/* | while IFS=: read -r dir; do
 	sudo unlink $dir  >> $LOG_FILE
 done
 
@@ -57,6 +62,11 @@ fi
 if test -f /usr/share/pixmaps/$APP_NAME.png; then
 	sudo rm -f /usr/share/pixmaps/$APP_NAME.png >> $LOG_FILE
 
+fi
+
+if command -v steamos-readonly &> /dev/null; then
+		sudo steamos-readonly enable >> $LOG_FILE
+		echo "steamos-readonly enabled" >> $LOG_FILE
 fi
 
 date >> $LOG_FILE
