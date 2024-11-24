@@ -34,9 +34,9 @@ SystemTrayNotificationHandler::SystemTrayNotificationHandler(QObject* parent) :
 
     m_menu.addSeparator();
 
-    m_trayActionVisitWebSite = m_menu.addAction(QIcon(":/images/tray/link.png"), tr("Visit Website"), [&](){
-        QDesktopServices::openUrl(QUrl("https://amnezia.org"));
-    });
+    m_trayActionVisitWebSite = m_menu.addAction(
+        QIcon(":/images/tray/link.png"), tr("Visit Website"),
+        [&]() { QDesktopServices::openUrl(QUrl("https://frkn.org")); });
 
     m_trayActionQuit = m_menu.addAction(QIcon(":/images/tray/cancel.png"), tr("Quit") + " " + APPLICATION_NAME, this, [&](){
         qApp->quit();
