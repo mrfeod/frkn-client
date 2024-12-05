@@ -51,7 +51,7 @@ import org.json.JSONException
 import org.json.JSONObject
 import org.qtproject.qt.android.bindings.QtActivity
 
-private const val TAG = "AmneziaActivity"
+private const val TAG = "FRKNActivity"
 const val ACTIVITY_MESSENGER_NAME = "Activity"
 
 private const val CHECK_VPN_PERMISSION_ACTION_CODE = 1

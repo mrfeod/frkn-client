@@ -166,11 +166,11 @@ PageType {
                 clickedFunction: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "AmneziaVPN.log"
+                        fileName = "FRKN.log"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save"),
                                                                 qsTr("Logs files (*.log)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/FRKN",
                                                                 true,
                                                                 ".log")
                     }
@@ -250,11 +250,11 @@ PageType {
                 clickedFunction: function() {
                     var fileName = ""
                     if (GC.isMobile()) {
-                        fileName = "AmneziaVPN-service.log"
+                        fileName = "FRKN-service.log"
                     } else {
                         fileName = SystemController.getFileName(qsTr("Save"),
                                                                 qsTr("Logs files (*.log)"),
-                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/AmneziaVPN-service",
+                                                                StandardPaths.standardLocations(StandardPaths.DocumentsLocation) + "/FRKN-service",
                                                                 true,
                                                                 ".log")
                     }

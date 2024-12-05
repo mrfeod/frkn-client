@@ -76,19 +76,18 @@ QString DaemonLocalServer::daemonPath() const {
     return TMP_PATH;
   }
 
-  if (dir.exists("amneziavpn")) {
-    logger.debug() << "/var/run/amneziavpn seems to be usable";
+  if (dir.exists("frkn")) {
+    logger.debug() << "/var/run/frkn seems to be usable";
     return VAR_PATH;
   }
 
-  if (!dir.mkdir("amneziavpn")) {
-    logger.warning() << "Failed to create /var/run/amneziavpn";
+  if (!dir.mkdir("frkn")) {
+    logger.warning() << "Failed to create /var/run/frkn";
     return TMP_PATH;
   }
 
-  if (chmod("/var/run/amneziavpn", S_IRWXU | S_IRWXG | S_IRWXO) < 0) {
-    logger.warning()
-        << "Failed to set the right permissions to /var/run/amneziavpn";
+  if (chmod("/var/run/frkn", S_IRWXU | S_IRWXG | S_IRWXO) < 0) {
+    logger.warning() << "Failed to set the right permissions to /var/run/frkn";
     return TMP_PATH;
   }
 

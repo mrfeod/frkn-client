@@ -526,8 +526,8 @@ void AmneziaApplication::initControllers()
               m_serversModel->removeServers();
               m_serversModel->addServers(servers);
               // TODO Select the best by load
-              m_serversModel->setDefaultServerIndex(
-                  QRandomGenerator::global()->bounded(servers.size()));
+              m_serversModel->setDefaultServerIndex(0);
+              //   QRandomGenerator::global()->bounded(servers.size()));
               emit m_importController->importFinished();
               m_pageController->showBusyIndicator(false);
             });
